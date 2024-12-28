@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Samples - Admin Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                bg: "#0f172a",
+                surface: "#1e293b",
+                input: "#334155",
+              },
+              light: {
+                bg: "#f8fafc",
+                surface: "#ffffff",
+                input: "#f8fafc",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="dark:bg-dark-bg bg-light-bg transition-colors">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-20 lg:w-72 h-screen fixed transition-all">
+        <div
+          class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
+        >
+          <!-- Logo -->
+          <div
+            class="h-16 flex items-center gap-3 px-6 border-b dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center"
+            >
+              <i class="fas fa-bolt text-white"></i>
+            </div>
+            <div class="hidden lg:block">
+              <h1 class="font-semibold text-base dark:text-white">
+                Admin Panel
+              </h1>
+              <p class="text-xs dark:text-gray-400 text-gray-500">
+                Enterprise Suite
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div
+            class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
+          >
+            <!-- Main Navigation -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Main
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="../dashboard.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-home group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Overview</span
+                  >
+                </a>
+                <a
+                  href="../users.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-users group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Users</span
+                  >
+                </a>
+                <a
+                  href="../tasks.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tasks group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tasks</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- UI Samples -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                UI Samples
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="table.html"
+                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+                >
+                  <i class="fas fa-table text-blue-500"></i>
+                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                    >Tables</span
+                  >
+                </a>
+                <a
+                  href="buttons.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-square group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Buttons</span
+                  >
+                </a>
+                <a
+                  href="badges.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tag group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Badges</span
+                  >
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- User Profile -->
+          <div
+            class="hidden lg:block p-4 border-t dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="flex items-center gap-3 p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-50 cursor-pointer transition-colors"
+            >
+              <img
+                src="https://ui-avatars.com/api/?name=Admin+User&background=3b82f6&color=fff"
+                alt="Profile"
+                class="w-10 h-10 rounded-lg"
+              />
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium dark:text-white truncate">
+                  Admin User
+                </p>
+                <p class="text-xs dark:text-gray-400 text-gray-500 truncate">
+                  admin@company.com
+                </p>
+              </div>
+              <button
+                class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              >
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="ml-20 lg:ml-72 flex-1">
+        <!-- Header -->
+        <header
+          class="h-16 flex items-center justify-between px-6 border-b dark:border-gray-800/50 border-gray-100 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-10"
+        >
+          <div class="flex items-center space-x-6">
+            <div
+              class="hidden sm:flex items-center text-sm dark:text-gray-400 text-gray-600"
+            >
+              <a href="#" class="hover:text-blue-500">UI Samples</a>
+              <i class="fas fa-chevron-right text-xs mx-2 text-gray-400"></i>
+              <span class="text-gray-900 dark:text-white font-medium"
+                >Tables</span
+              >
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="flex items-center space-x-4">
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
+            >
+              <i class="fas fa-sun hidden dark:inline-block"></i>
+              <i class="fas fa-moon dark:hidden"></i>
+            </button>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="p-6 space-y-6">
+          <!-- Basic Table -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Basic Table</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                A simple table with basic styling
+              </p>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr
+                    class="border-b dark:border-gray-800/50 border-gray-100 bg-gray-50/50 dark:bg-dark-input/50"
+                  >
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Name
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Email
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Role
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y dark:divide-gray-800/50 divide-gray-100">
+                  <tr
+                    class="hover:bg-gray-50/50 dark:hover:bg-dark-input/50 transition-colors"
+                  >
+                    <td class="py-4 px-6 text-sm dark:text-white text-gray-900">
+                      John Doe
+                    </td>
+                    <td
+                      class="py-4 px-6 text-sm dark:text-gray-400 text-gray-600"
+                    >
+                      john@example.com
+                    </td>
+                    <td
+                      class="py-4 px-6 text-sm dark:text-gray-400 text-gray-600"
+                    >
+                      Admin
+                    </td>
+                    <td class="py-4 px-6">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
+                      >
+                        Active
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Table with Actions -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Table with Actions
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Table with checkboxes and action buttons
+              </p>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr
+                    class="border-b dark:border-gray-800/50 border-gray-100 bg-gray-50/50 dark:bg-dark-input/50"
+                  >
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      <input
+                        type="checkbox"
+                        class="rounded dark:bg-dark-input border-gray-300 dark:border-gray-600 text-blue-500 focus:ring-blue-500"
+                      />
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Task
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Priority
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Status
+                    </th>
+                    <th
+                      class="text-right py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y dark:divide-gray-800/50 divide-gray-100">
+                  <tr
+                    class="hover:bg-gray-50/50 dark:hover:bg-dark-input/50 transition-colors"
+                  >
+                    <td class="py-4 px-6">
+                      <input
+                        type="checkbox"
+                        class="rounded dark:bg-dark-input border-gray-300 dark:border-gray-600 text-blue-500 focus:ring-blue-500"
+                      />
+                    </td>
+                    <td class="py-4 px-6">
+                      <div>
+                        <p
+                          class="text-sm font-medium dark:text-white text-gray-900"
+                        >
+                          Update dashboard
+                        </p>
+                        <p class="text-sm dark:text-gray-400 text-gray-600">
+                          Implement new features
+                        </p>
+                      </div>
+                    </td>
+                    <td class="py-4 px-6">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-400"
+                      >
+                        High
+                      </span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-400"
+                      >
+                        In Progress
+                      </span>
+                    </td>
+                    <td class="py-4 px-6">
+                      <div class="flex items-center justify-end gap-2">
+                        <button
+                          class="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 text-blue-500 transition-colors"
+                        >
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button
+                          class="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-500/10 text-red-500 transition-colors"
+                        >
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Table with Filters -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50 mb-6"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Table with Filters
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Table with search and filter options
+              </p>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="p-4 border-b dark:border-gray-800/50 border-gray-100">
+              <div
+                class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+              >
+                <!-- Search -->
+                <div class="relative flex-1">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="w-full pl-10 pr-4 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  />
+                  <i
+                    class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  ></i>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <select
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Roles</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                    <option value="editor">Editor</option>
+                  </select>
+
+                  <select
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+
+                  <button
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 dark:text-gray-300 text-gray-900 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    <i class="fas fa-download mr-2"></i>
+                    Export
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Table Content -->
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr
+                    class="border-b dark:border-gray-800/50 border-gray-100 bg-gray-50/50 dark:bg-dark-input/50"
+                  >
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Name
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Email
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Role
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y dark:divide-gray-800/50 divide-gray-100">
+                  <tr
+                    class="hover:bg-gray-50/50 dark:hover:bg-dark-input/50 transition-colors"
+                  >
+                    <td class="py-4 px-6 text-sm dark:text-white text-gray-900">
+                      John Doe
+                    </td>
+                    <td
+                      class="py-4 px-6 text-sm dark:text-gray-400 text-gray-600"
+                    >
+                      john@example.com
+                    </td>
+                    <td
+                      class="py-4 px-6 text-sm dark:text-gray-400 text-gray-600"
+                    >
+                      Admin
+                    </td>
+                    <td class="py-4 px-6">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
+                      >
+                        Active
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="border-t dark:border-gray-800/50 border-gray-100">
+              <div class="px-6 py-3.5 flex items-center justify-between">
+                <!-- Left side: Results info and Items per page -->
+                <div class="flex items-center gap-6">
+                  <div class="flex items-center gap-3">
+                    <select
+                      class="h-9 pl-3 pr-8 text-sm rounded-lg dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-600 focus:ring-1 focus:ring-blue-500 cursor-pointer"
+                    >
+                      <option value="10">10 rows</option>
+                      <option value="20">20 rows</option>
+                      <option value="50">50 rows</option>
+                      <option value="100">100 rows</option>
+                    </select>
+                    <span class="text-sm dark:text-gray-400 text-gray-500"
+                      >per page</span
+                    >
+                  </div>
+
+                  <p class="text-sm dark:text-gray-400 text-gray-500">
+                    1-10 of 100 items
+                  </p>
+                </div>
+
+                <!-- Right side: Pagination buttons -->
+                <nav class="flex items-center gap-1" aria-label="Pagination">
+                  <button
+                    class="p-2 rounded-lg dark:text-gray-400 text-gray-500 hover:bg-gray-100 dark:hover:bg-dark-input disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                  >
+                    <i class="fas fa-chevron-left text-sm"></i>
+                  </button>
+
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm bg-blue-500 text-white hover:bg-blue-600"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    3
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600"
+                  >
+                    ...
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    10
+                  </button>
+
+                  <button
+                    class="p-2 rounded-lg dark:text-gray-400 text-gray-500 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    <i class="fas fa-chevron-right text-sm"></i>
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- Complete Table Example -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Complete Table Example
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Table with all features combined
+              </p>
+            </div>
+
+            <!-- Filters Section -->
+            <div class="p-4 border-b dark:border-gray-800/50 border-gray-100">
+              <div
+                class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+              >
+                <!-- Search -->
+                <div class="relative flex-1">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="w-full pl-10 pr-4 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  />
+                  <i
+                    class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  ></i>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <select
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Roles</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                    <option value="editor">Editor</option>
+                  </select>
+
+                  <select
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Status</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+
+                  <button
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 dark:text-gray-300 text-gray-900 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    <i class="fas fa-download mr-2"></i>
+                    Export
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr
+                    class="border-b dark:border-gray-800/50 border-gray-100 bg-gray-50/50 dark:bg-dark-input/50"
+                  >
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Name
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Email
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Role
+                    </th>
+                    <th
+                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    >
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y dark:divide-gray-800/50 divide-gray-100">
+                  <tr
+                    class="hover:bg-gray-50/50 dark:hover:bg-dark-input/50 transition-colors"
+                  >
+                    <td class="py-4 px-6 text-sm dark:text-white text-gray-900">
+                      John Doe
+                    </td>
+                    <td
+                      class="py-4 px-6 text-sm dark:text-gray-400 text-gray-600"
+                    >
+                      john@example.com
+                    </td>
+                    <td
+                      class="py-4 px-6 text-sm dark:text-gray-400 text-gray-600"
+                    >
+                      Admin
+                    </td>
+                    <td class="py-4 px-6">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
+                      >
+                        Active
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="border-t dark:border-gray-800/50 border-gray-100">
+              <div class="px-6 py-3.5 flex items-center justify-between">
+                <!-- Left side: Results info and Items per page -->
+                <div class="flex items-center gap-6">
+                  <div class="flex items-center gap-3">
+                    <select
+                      class="h-9 pl-3 pr-8 text-sm rounded-lg dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-600 focus:ring-1 focus:ring-blue-500 cursor-pointer"
+                    >
+                      <option value="10">10 rows</option>
+                      <option value="20">20 rows</option>
+                      <option value="50">50 rows</option>
+                      <option value="100">100 rows</option>
+                    </select>
+                    <span class="text-sm dark:text-gray-400 text-gray-500"
+                      >per page</span
+                    >
+                  </div>
+
+                  <p class="text-sm dark:text-gray-400 text-gray-500">
+                    1-10 of 100 items
+                  </p>
+                </div>
+
+                <!-- Right side: Pagination buttons -->
+                <nav class="flex items-center gap-1" aria-label="Pagination">
+                  <button
+                    class="p-2 rounded-lg dark:text-gray-400 text-gray-500 hover:bg-gray-100 dark:hover:bg-dark-input disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                  >
+                    <i class="fas fa-chevron-left text-sm"></i>
+                  </button>
+
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm bg-blue-500 text-white hover:bg-blue-600"
+                  >
+                    1
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    3
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600"
+                  >
+                    ...
+                  </button>
+                  <button
+                    class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    10
+                  </button>
+
+                  <button
+                    class="p-2 rounded-lg dark:text-gray-400 text-gray-500 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    <i class="fas fa-chevron-right text-sm"></i>
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

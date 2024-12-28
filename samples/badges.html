@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <!-- Copy head section from table.html -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badges Samples - Admin Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                bg: "#0f172a",
+                surface: "#1e293b",
+                input: "#334155",
+              },
+              light: {
+                bg: "#f8fafc",
+                surface: "#ffffff",
+                input: "#f8fafc",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="dark:bg-dark-bg bg-light-bg transition-colors">
+    <div class="flex min-h-screen">
+      <!-- Copy sidebar from table.html but update active state for Badges -->
+      <aside class="w-20 lg:w-72 h-screen fixed transition-all">
+        <div
+          class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
+        >
+          <!-- Logo -->
+          <div
+            class="h-16 flex items-center gap-3 px-6 border-b dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center"
+            >
+              <i class="fas fa-bolt text-white"></i>
+            </div>
+            <div class="hidden lg:block">
+              <h1 class="font-semibold text-base dark:text-white">
+                Admin Panel
+              </h1>
+              <p class="text-xs dark:text-gray-400 text-gray-500">
+                Enterprise Suite
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div
+            class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
+          >
+            <!-- Main Navigation -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Main
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="../dashboard.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-home group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Overview</span
+                  >
+                </a>
+                <a
+                  href="../users.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-users group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Users</span
+                  >
+                </a>
+                <a
+                  href="../tasks.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tasks group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tasks</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- UI Samples -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                UI Samples
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="table.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-square group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tables</span
+                  >
+                </a>
+                <a
+                  href="buttons.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tag group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Buttons</span
+                  >
+                </a>
+                <a
+                  href="badges.html"
+                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+                >
+                  <i class="fas fa-tag text-blue-500"></i>
+                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                    >Badges</span
+                  >
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- User Profile -->
+          <div
+            class="hidden lg:block p-4 border-t dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="flex items-center gap-3 p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-50 cursor-pointer transition-colors"
+            >
+              <img
+                src="https://ui-avatars.com/api/?name=Admin+User&background=3b82f6&color=fff"
+                alt="Profile"
+                class="w-10 h-10 rounded-lg"
+              />
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium dark:text-white truncate">
+                  Admin User
+                </p>
+                <p class="text-xs dark:text-gray-400 text-gray-500 truncate">
+                  admin@company.com
+                </p>
+              </div>
+              <button
+                class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              >
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="ml-20 lg:ml-72 flex-1">
+        <!-- Copy header from table.html but update breadcrumb to "Badges" -->
+        <header
+          class="h-16 flex items-center justify-between px-6 border-b dark:border-gray-800/50 border-gray-100 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-10"
+        >
+          <div class="flex items-center space-x-6">
+            <div
+              class="hidden sm:flex items-center text-sm dark:text-gray-400 text-gray-600"
+            >
+              <a href="#" class="hover:text-blue-500">UI Samples</a>
+              <i class="fas fa-chevron-right text-xs mx-2 text-gray-400"></i>
+              <span class="text-gray-900 dark:text-white font-medium"
+                >Tables</span
+              >
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="flex items-center space-x-4">
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
+            >
+              <i class="fas fa-sun hidden dark:inline-block"></i>
+              <i class="fas fa-moon dark:hidden"></i>
+            </button>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="p-6 space-y-6">
+          <!-- Solid Badges -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Solid Badges</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Basic solid background badges
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
+                >
+                  Primary
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
+                >
+                  Success
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-400"
+                >
+                  Warning
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-400"
+                >
+                  Danger
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-500/10 dark:text-purple-400"
+                >
+                  Info
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 dark:bg-gray-500/10 dark:text-gray-400"
+                >
+                  Dark
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outlined Badges -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Outlined Badges
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Badges with border and transparent background
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-blue-500 text-blue-500 dark:text-blue-400"
+                >
+                  Primary
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-green-500 text-green-500 dark:text-green-400"
+                >
+                  Success
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-yellow-500 text-yellow-500 dark:text-yellow-400"
+                >
+                  Warning
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-red-500 text-red-500 dark:text-red-400"
+                >
+                  Danger
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-purple-500 text-purple-500 dark:text-purple-400"
+                >
+                  Info
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-gray-500 text-gray-500 dark:text-gray-400"
+                >
+                  Dark
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flat Badges -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Flat Badges</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Simple text-only badges
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-blue-500 dark:text-blue-400"
+                >
+                  Primary
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-green-500 dark:text-green-400"
+                >
+                  Success
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-yellow-500 dark:text-yellow-400"
+                >
+                  Warning
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-red-500 dark:text-red-400"
+                >
+                  Danger
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-purple-500 dark:text-purple-400"
+                >
+                  Info
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:text-gray-400"
+                >
+                  Dark
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges with Icons -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Badges with Icons
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Badges with leading icons
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <!-- Solid with Icons -->
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
+                >
+                  <i class="fas fa-check mr-1"></i>
+                  Active
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-400"
+                >
+                  <i class="fas fa-clock mr-1"></i>
+                  Pending
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-400"
+                >
+                  <i class="fas fa-times mr-1"></i>
+                  Failed
+                </span>
+
+                <!-- Outlined with Icons -->
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-green-500 text-green-500 dark:text-green-400"
+                >
+                  <i class="fas fa-check mr-1"></i>
+                  Verified
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-purple-500 text-purple-500 dark:text-purple-400"
+                >
+                  <i class="fas fa-star mr-1"></i>
+                  Premium
+                </span>
+              </div>
+
+              <!-- Status Indicators -->
+              <div class="flex flex-wrap gap-4 mt-4">
+                <span
+                  class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                  Online
+                </span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-400"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                  Offline
+                </span>
+                <span
+                  class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-400"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
+                  Away
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badge Sizes -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Badge Sizes</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Different badge size variations
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap items-center gap-4">
+                <span
+                  class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
+                >
+                  Small
+                </span>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
+                >
+                  Medium
+                </span>
+                <span
+                  class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
+                >
+                  Large
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

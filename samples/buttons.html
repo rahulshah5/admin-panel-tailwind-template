@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <!-- Copy head section from table.html -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons - Samples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                bg: "#0f172a",
+                surface: "#1e293b",
+                input: "#334155",
+              },
+              light: {
+                bg: "#f8fafc",
+                surface: "#ffffff",
+                input: "#f8fafc",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="dark:bg-dark-bg bg-light-bg transition-colors">
+    <div class="flex min-h-screen">
+      <!-- Copy sidebar from table.html but update active state for Buttons -->
+      <aside class="w-20 lg:w-72 h-screen fixed transition-all">
+        <div
+          class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
+        >
+          <!-- Logo -->
+          <div
+            class="h-16 flex items-center gap-3 px-6 border-b dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center"
+            >
+              <i class="fas fa-bolt text-white"></i>
+            </div>
+            <div class="hidden lg:block">
+              <h1 class="font-semibold text-base dark:text-white">
+                Admin Panel
+              </h1>
+              <p class="text-xs dark:text-gray-400 text-gray-500">
+                Enterprise Suite
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div
+            class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
+          >
+            <!-- Main Navigation -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Main
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="../dashboard.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-home group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Overview</span
+                  >
+                </a>
+                <a
+                  href="../users.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-users group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Users</span
+                  >
+                </a>
+                <a
+                  href="../tasks.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tasks group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tasks</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- UI Samples -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                UI Samples
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="table.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-square group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tables</span
+                  >
+                </a>
+                <a
+                  href="buttons.html"
+                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+                >
+                  <i class="fas fa-table text-blue-500"></i>
+                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                    >Buttons</span
+                  >
+                </a>
+
+                <a
+                  href="badges.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tag group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Badges</span
+                  >
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- User Profile -->
+          <div
+            class="hidden lg:block p-4 border-t dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="flex items-center gap-3 p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-50 cursor-pointer transition-colors"
+            >
+              <img
+                src="https://ui-avatars.com/api/?name=Admin+User&background=3b82f6&color=fff"
+                alt="Profile"
+                class="w-10 h-10 rounded-lg"
+              />
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium dark:text-white truncate">
+                  Admin User
+                </p>
+                <p class="text-xs dark:text-gray-400 text-gray-500 truncate">
+                  admin@company.com
+                </p>
+              </div>
+              <button
+                class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              >
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="ml-20 lg:ml-72 flex-1">
+        <!-- Copy header from table.html but update breadcrumb to "Buttons" -->
+        <!-- ... header content ... -->
+
+        <!-- Content -->
+        <div class="p-6 space-y-6">
+          <!-- Primary Buttons -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Primary Buttons
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Main call-to-action buttons
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Default
+                </button>
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700 transition-colors"
+                >
+                  Active State
+                </button>
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg opacity-50 cursor-not-allowed"
+                  disabled
+                >
+                  Disabled
+                </button>
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-dark-bg transition-colors"
+                >
+                  With Focus Ring
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colored Buttons -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Colored Buttons
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Buttons with different color variations
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Primary
+                </button>
+                <button
+                  class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                >
+                  Success
+                </button>
+                <button
+                  class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
+                >
+                  Warning
+                </button>
+                <button
+                  class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
+                >
+                  Danger
+                </button>
+                <button
+                  class="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
+                >
+                  Info
+                </button>
+                <button
+                  class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                >
+                  Dark
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outlined Buttons -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Outlined Buttons
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Buttons with border and transparent background
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="px-4 py-2 border-2 border-blue-500 text-blue-500 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 transition-colors"
+                >
+                  Primary
+                </button>
+                <button
+                  class="px-4 py-2 border-2 border-green-500 text-green-500 dark:text-green-400 rounded-lg hover:bg-green-50 dark:hover:bg-green-500/10 transition-colors"
+                >
+                  Success
+                </button>
+                <button
+                  class="px-4 py-2 border-2 border-yellow-500 text-yellow-500 dark:text-yellow-400 rounded-lg hover:bg-yellow-50 dark:hover:bg-yellow-500/10 transition-colors"
+                >
+                  Warning
+                </button>
+                <button
+                  class="px-4 py-2 border-2 border-red-500 text-red-500 dark:text-red-400 rounded-lg hover:bg-red-50 dark:hover:bg-red-500/10 transition-colors"
+                >
+                  Danger
+                </button>
+                <button
+                  class="px-4 py-2 border-2 border-gray-500 text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600/10 transition-colors"
+                >
+                  Dark
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flat Buttons -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Flat Buttons</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Buttons without background or border
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="px-4 py-2 text-blue-500 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 rounded-lg transition-colors"
+                >
+                  Primary
+                </button>
+                <button
+                  class="px-4 py-2 text-green-500 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-500/10 rounded-lg transition-colors"
+                >
+                  Success
+                </button>
+                <button
+                  class="px-4 py-2 text-yellow-500 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-500/10 rounded-lg transition-colors"
+                >
+                  Warning
+                </button>
+                <button
+                  class="px-4 py-2 text-red-500 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors"
+                >
+                  Danger
+                </button>
+                <button
+                  class="px-4 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600/10 rounded-lg transition-colors"
+                >
+                  Dark
+                </button>
+              </div>
+
+              <!-- Flat Buttons with Icons -->
+              <div class="flex flex-wrap gap-4 mt-4">
+                <button
+                  class="inline-flex items-center px-4 py-2 text-blue-500 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 rounded-lg transition-colors"
+                >
+                  <i class="fas fa-plus mr-2"></i>
+                  Add New
+                </button>
+                <button
+                  class="inline-flex items-center px-4 py-2 text-green-500 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-500/10 rounded-lg transition-colors"
+                >
+                  <i class="fas fa-check mr-2"></i>
+                  Approve
+                </button>
+                <button
+                  class="inline-flex items-center px-4 py-2 text-red-500 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors"
+                >
+                  <i class="fas fa-trash mr-2"></i>
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons with Icons -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Buttons with Icons
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Buttons with leading or trailing icons
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <!-- Leading Icons -->
+                <button
+                  class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  <i class="fas fa-plus mr-2"></i>
+                  Add New
+                </button>
+                <button
+                  class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                >
+                  <i class="fas fa-download mr-2"></i>
+                  Download
+                </button>
+
+                <!-- Trailing Icons -->
+                <button
+                  class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Next
+                  <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <button
+                  class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                >
+                  Share
+                  <i class="fas fa-share ml-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Icon Only Buttons -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Icon Only Buttons
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Compact buttons with only icons
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-input text-gray-600 dark:text-gray-400 transition-colors"
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+                <button
+                  class="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 text-blue-500 transition-colors"
+                >
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button
+                  class="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-500/10 text-red-500 transition-colors"
+                >
+                  <i class="fas fa-trash"></i>
+                </button>
+                <button
+                  class="p-2 rounded-lg hover:bg-green-50 dark:hover:bg-green-500/10 text-green-500 transition-colors"
+                >
+                  <i class="fas fa-check"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button Sizes -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Button Sizes</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Different button size variations
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap items-center gap-4">
+                <button
+                  class="px-3 py-1.5 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Small
+                </button>
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Medium
+                </button>
+                <button
+                  class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button Groups -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Button Groups</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Connected button groups
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="inline-flex rounded-lg overflow-hidden">
+                <button
+                  class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors border-r dark:border-gray-700 border-gray-200"
+                >
+                  Left
+                </button>
+                <button
+                  class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors border-r dark:border-gray-700 border-gray-200"
+                >
+                  Middle
+                </button>
+                <button
+                  class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                >
+                  Right
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
