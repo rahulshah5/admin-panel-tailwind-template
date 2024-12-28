@@ -450,7 +450,9 @@
         </header>
 
         <!-- Tasks Content -->
-        <div class="p-6">
+        <div
+          class="p-6 mt-10"
+        >
           <!-- Page Title & Actions -->
           <div
             class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
@@ -471,209 +473,211 @@
             </button>
           </div>
 
-          <!-- Filters & Search -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50 p-4 mb-6"
-          >
-            <div
-              class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
-            >
-              <!-- Search -->
-              <div class="relative flex-1">
-                <input
-                  type="text"
-                  placeholder="Search tasks..."
-                  class="w-full pl-10 pr-4 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
-                />
-                <i
-                  class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                ></i>
-              </div>
+          <div class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50 p-4 mb-6">
+            <!-- Filters & Search -->
+            <div class="">
+              <div
+                class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+              >
+                <!-- Search -->
+                <div class="relative flex-1">
+                  <input
+                    type="text"
+                    placeholder="Search tasks..."
+                    class="w-full pl-10 pr-4 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  />
+                  <i
+                    class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  ></i>
+                </div>
 
-              <!-- Filters -->
-              <div class="flex flex-wrap items-center gap-3">
-                <!-- Priority Filter -->
-                <select
-                  class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">All Priorities</option>
-                  <option value="high">High</option>
-                  <option value="medium">Medium</option>
-                  <option value="low">Low</option>
-                </select>
+                <!-- Filters -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <!-- Priority Filter -->
+                  <select
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Priorities</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                  </select>
 
-                <!-- Status Filter -->
-                <select
-                  class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">All Status</option>
-                  <option value="todo">To Do</option>
-                  <option value="in-progress">In Progress</option>
-                  <option value="completed">Completed</option>
-                </select>
+                  <!-- Status Filter -->
+                  <select
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">All Status</option>
+                    <option value="todo">To Do</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                  </select>
 
-                <!-- Export Button -->
-                <button
-                  class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 dark:text-gray-300 text-gray-900 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
-                >
-                  <i class="fas fa-download mr-2"></i>
-                  Export
-                </button>
+                  <!-- Export Button -->
+                  <button
+                    class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 dark:text-gray-300 text-gray-900 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    <i class="fas fa-download mr-2"></i>
+                    Export
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Tasks List -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="overflow-visible">
-              <table class="w-full">
-                <thead>
-                  <tr
-                    class="border-b dark:border-gray-800/50 border-gray-100 bg-gray-50/50 dark:bg-dark-input/50"
+            <!-- Tasks List -->
+            <div
+              class="my-8 rounded-xl border border-gray-100 dark:border-gray-800/50"
+            >
+              <div class="overflow-visible">
+                <table class="w-full">
+                  <thead>
+                    <tr
+                      class="border-b dark:border-gray-800/50 border-gray-100 bg-gray-50/50 dark:bg-dark-input/50"
+                    >
+                      <th
+                        class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                      >
+                        <input
+                          type="checkbox"
+                          class="rounded dark:bg-dark-input border-gray-300 dark:border-gray-600 text-blue-500 focus:ring-blue-500"
+                        />
+                      </th>
+                      <th
+                        class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                      >
+                        Task
+                      </th>
+                      <th
+                        class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                      >
+                        Priority
+                      </th>
+                      <th
+                        class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                      >
+                        Status
+                      </th>
+                      <th
+                        class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                      >
+                        Due Date
+                      </th>
+                      <th
+                        class="text-right py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                      >
+                        <span class="inline-flex items-center">
+                          <i class="fas fa-sliders-h mr-2"></i>
+                          Actions
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="divide-y dark:divide-gray-800/50 divide-gray-100"
                   >
-                    <th
-                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
+                    <!-- Task Row -->
+                    <tr
+                      class="hover:bg-gray-50/50 dark:hover:bg-dark-input/50 transition-colors"
                     >
-                      <input
-                        type="checkbox"
-                        class="rounded dark:bg-dark-input border-gray-300 dark:border-gray-600 text-blue-500 focus:ring-blue-500"
-                      />
-                    </th>
-                    <th
-                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
-                    >
-                      Task
-                    </th>
-                    <th
-                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
-                    >
-                      Priority
-                    </th>
-                    <th
-                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
-                    >
-                      Status
-                    </th>
-                    <th
-                      class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
-                    >
-                      Due Date
-                    </th>
-                    <th
-                      class="text-right py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
-                    >
-                      <span class="inline-flex items-center">
-                        <i class="fas fa-sliders-h mr-2"></i>
-                        Actions
-                      </span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y dark:divide-gray-800/50 divide-gray-100">
-                  <!-- Task Row -->
-                  <tr
-                    class="hover:bg-gray-50/50 dark:hover:bg-dark-input/50 transition-colors"
-                  >
-                    <td class="py-4 px-6">
-                      <input
-                        type="checkbox"
-                        class="rounded dark:bg-dark-input border-gray-300 dark:border-gray-600 text-blue-500 focus:ring-blue-500"
-                      />
-                    </td>
-                    <td class="py-4 px-6">
-                      <div>
-                        <p
-                          class="text-sm font-medium dark:text-white text-gray-900"
-                        >
-                          Update user dashboard
-                        </p>
-                        <p class="text-sm dark:text-gray-400 text-gray-600">
-                          Implement new analytics charts
-                        </p>
-                      </div>
-                    </td>
-                    <td class="py-4 px-6">
-                      <span
-                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-400"
-                      >
-                        High
-                      </span>
-                    </td>
-                    <td class="py-4 px-6">
-                      <span
-                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-400"
-                      >
-                        In Progress
-                      </span>
-                    </td>
-                    <td class="py-4 px-6">
-                      <span class="text-sm dark:text-gray-400 text-gray-600"
-                        >Tomorrow</span
-                      >
-                    </td>
-                    <td class="py-4 px-6">
-                      <div class="flex items-center justify-end gap-2">
-                        <!-- Edit Button -->
-                        <button
-                          class="group relative p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 text-blue-500 transition-colors"
-                        >
-                          <i class="fas fa-edit"></i>
-                          <span
-                            class="absolute hidden group-hover:block -top-10 -left-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md whitespace-nowrap"
+                      <td class="py-4 px-6">
+                        <input
+                          type="checkbox"
+                          class="rounded dark:bg-dark-input border-gray-300 dark:border-gray-600 text-blue-500 focus:ring-blue-500"
+                        />
+                      </td>
+                      <td class="py-4 px-6">
+                        <div>
+                          <p
+                            class="text-sm font-medium dark:text-white text-gray-900"
                           >
-                            Edit Task
-                          </span>
-                        </button>
-
-                        <!-- More Actions Dropdown -->
-                        <div class="relative">
+                            Update user dashboard
+                          </p>
+                          <p class="text-sm dark:text-gray-400 text-gray-600">
+                            Implement new analytics charts
+                          </p>
+                        </div>
+                      </td>
+                      <td class="py-4 px-6">
+                        <span
+                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-400"
+                        >
+                          High
+                        </span>
+                      </td>
+                      <td class="py-4 px-6">
+                        <span
+                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-400"
+                        >
+                          In Progress
+                        </span>
+                      </td>
+                      <td class="py-4 px-6">
+                        <span class="text-sm dark:text-gray-400 text-gray-600"
+                          >Tomorrow</span
+                        >
+                      </td>
+                      <td class="py-4 px-6">
+                        <div class="flex items-center justify-end gap-2">
+                          <!-- Edit Button -->
                           <button
-                            class="group p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-input text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                            onclick="toggleDropdown(event, this)"
+                            class="group relative p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 text-blue-500 transition-colors"
                           >
-                            <i class="fas fa-ellipsis-v"></i>
+                            <i class="fas fa-edit"></i>
+                            <span
+                              class="absolute hidden group-hover:block -top-10 -left-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md whitespace-nowrap"
+                            >
+                              Edit Task
+                            </span>
                           </button>
-                          <div
-                            class="hidden absolute right-0 mt-1 w-48 bg-white dark:bg-dark-surface rounded-lg shadow-lg border dark:border-gray-800/50 border-gray-100 py-1 z-50"
-                          >
-                            <a
-                              href="#"
-                              class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-input"
+
+                          <!-- More Actions Dropdown -->
+                          <div class="relative">
+                            <button
+                              class="group p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-input text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                              onclick="toggleDropdown(event, this)"
                             >
-                              <i class="fas fa-check w-5 text-gray-400"></i>
-                              <span>Mark Complete</span>
-                            </a>
-                            <a
-                              href="#"
-                              class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-input"
-                            >
-                              <i class="fas fa-user w-5 text-gray-400"></i>
-                              <span>Assign User</span>
-                            </a>
+                              <i class="fas fa-ellipsis-v"></i>
+                            </button>
                             <div
-                              class="border-t dark:border-gray-800/50 border-gray-100 my-1"
-                            ></div>
-                            <a
-                              href="#"
-                              class="flex items-center px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                              class="hidden absolute right-0 mt-1 w-48 bg-white dark:bg-dark-surface rounded-lg shadow-lg border dark:border-gray-800/50 border-gray-100 py-1 z-50"
                             >
-                              <i class="fas fa-trash w-5"></i>
-                              <span>Delete Task</span>
-                            </a>
+                              <a
+                                href="#"
+                                class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-input"
+                              >
+                                <i class="fas fa-check w-5 text-gray-400"></i>
+                                <span>Mark Complete</span>
+                              </a>
+                              <a
+                                href="#"
+                                class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-input"
+                              >
+                                <i class="fas fa-user w-5 text-gray-400"></i>
+                                <span>Assign User</span>
+                              </a>
+                              <div
+                                class="border-t dark:border-gray-800/50 border-gray-100 my-1"
+                              ></div>
+                              <a
+                                href="#"
+                                class="flex items-center px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                              >
+                                <i class="fas fa-trash w-5"></i>
+                                <span>Delete Task</span>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>
 
-                  <!-- Add more task rows here -->
-                </tbody>
-              </table>
+                    <!-- Add more task rows here -->
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Pagination - Same as users.html -->
             </div>
-
-            <!-- Pagination - Same as users.html -->
           </div>
         </div>
       </main>
