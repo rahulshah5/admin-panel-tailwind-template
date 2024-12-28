@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-  <!-- Head section same as dashboard.html -->
+  <!-- Copy head section from dashboard.html -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,12 +71,13 @@
   </head>
   <body class="dark:bg-dark-bg bg-light-bg transition-colors">
     <div class="flex min-h-screen">
-      <!-- Sidebar same as dashboard.html -->
+      <!-- Sidebar -->
       <aside class="w-20 lg:w-72 h-screen fixed transition-all">
+        <!-- Copy sidebar structure from dashboard.html but update active state -->
         <div
           class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
         >
-          <!-- Logo -->
+          <!-- Logo Section -->
           <div
             class="h-16 flex items-center gap-3 px-6 border-b dark:border-gray-800/50 border-gray-100"
           >
@@ -95,7 +96,7 @@
             </div>
           </div>
 
-          <!-- Navigation Groups -->
+          <!-- Navigation -->
           <div
             class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
           >
@@ -121,10 +122,13 @@
                 </a>
                 <a
                   href="users.html"
-                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
                 >
-                  <i class="fas fa-users text-blue-500"></i>
-                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                  <i
+                    class="fas fa-users group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
                     >Users</span
                   >
                 </a>
@@ -153,13 +157,10 @@
                 </a>
                 <a
                   href="tasks.html"
-                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
                 >
-                  <i
-                    class="fas fa-tasks group-hover:text-blue-500 transition-colors"
-                  ></i>
-                  <span
-                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  <i class="fas fa-tasks text-blue-500"></i>
+                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
                     >Tasks</span
                   >
                 </a>
@@ -217,7 +218,7 @@
             <div class="h-6"></div>
           </div>
 
-          <!-- User Profile -->
+          <!-- User Profile section same as dashboard.html -->
           <div
             class="hidden lg:block p-4 border-t dark:border-gray-800/50 border-gray-100"
           >
@@ -249,32 +250,30 @@
 
       <!-- Main Content -->
       <main class="ml-20 lg:ml-72 flex-1">
-        <!-- Header same as dashboard.html -->
+        <!-- Header same as dashboard.html but update breadcrumb -->
         <header
           class="h-16 flex items-center justify-between px-6 border-b dark:border-gray-800/50 border-gray-100 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-10"
         >
           <!-- Left Section -->
           <div class="flex items-center space-x-6">
-            <!-- Mobile Menu Button -->
             <button
               class="lg:hidden p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
             >
               <i class="fas fa-bars"></i>
             </button>
 
-            <!-- Page Title & Breadcrumb -->
             <div
               class="hidden sm:flex items-center text-sm dark:text-gray-400 text-gray-600"
             >
-              <a href="#" class="hover:text-blue-500">Dashboard</a>
+              <a href="#" class="hover:text-blue-500">Management</a>
               <i class="fas fa-chevron-right text-xs mx-2 text-gray-400"></i>
               <span class="text-gray-900 dark:text-white font-medium"
-                >Overview</span
+                >Tasks</span
               >
             </div>
           </div>
 
-          <!-- Right Section -->
+          <!-- Right Section same as dashboard.html -->
           <div class="flex items-center space-x-4">
             <!-- Search -->
             <div class="hidden md:flex items-center">
@@ -486,7 +485,7 @@
           </div>
         </header>
 
-        <!-- Users Content -->
+        <!-- Tasks Content -->
         <div class="p-6">
           <!-- Page Title & Actions -->
           <div
@@ -494,17 +493,17 @@
           >
             <div>
               <h1 class="text-2xl font-semibold dark:text-white text-gray-900">
-                Users
+                Tasks
               </h1>
               <p class="text-sm dark:text-gray-400 text-gray-600 mt-1">
-                Manage your system users
+                Manage and track your team's tasks
               </p>
             </div>
             <button
               class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
             >
               <i class="fas fa-plus mr-2"></i>
-              Add New User
+              Add New Task
             </button>
           </div>
 
@@ -519,7 +518,7 @@
               <div class="relative flex-1">
                 <input
                   type="text"
-                  placeholder="Search users..."
+                  placeholder="Search tasks..."
                   class="w-full pl-10 pr-4 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
                 />
                 <i
@@ -529,14 +528,14 @@
 
               <!-- Filters -->
               <div class="flex flex-wrap items-center gap-3">
-                <!-- Role Filter -->
+                <!-- Priority Filter -->
                 <select
                   class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="">All Roles</option>
-                  <option value="admin">Admin</option>
-                  <option value="user">User</option>
-                  <option value="editor">Editor</option>
+                  <option value="">All Priorities</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
                 </select>
 
                 <!-- Status Filter -->
@@ -544,9 +543,9 @@
                   class="px-3 py-2 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">All Status</option>
-                  <option value="active">Active</option>
-                  <option value="inactive">Inactive</option>
-                  <option value="suspended">Suspended</option>
+                  <option value="todo">To Do</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="completed">Completed</option>
                 </select>
 
                 <!-- Export Button -->
@@ -560,7 +559,7 @@
             </div>
           </div>
 
-          <!-- Users Table -->
+          <!-- Tasks List -->
           <div
             class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
           >
@@ -581,12 +580,12 @@
                     <th
                       class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
                     >
-                      User
+                      Task
                     </th>
                     <th
                       class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
                     >
-                      Role
+                      Priority
                     </th>
                     <th
                       class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
@@ -596,7 +595,7 @@
                     <th
                       class="text-left py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
                     >
-                      Last Active
+                      Due Date
                     </th>
                     <th
                       class="text-right py-4 px-6 text-sm font-medium dark:text-gray-400 text-gray-600"
@@ -609,7 +608,7 @@
                   </tr>
                 </thead>
                 <tbody class="divide-y dark:divide-gray-800/50 divide-gray-100">
-                  <!-- User Row -->
+                  <!-- Task Row -->
                   <tr
                     class="hover:bg-gray-50/50 dark:hover:bg-dark-input/50 transition-colors"
                   >
@@ -620,70 +619,47 @@
                       />
                     </td>
                     <td class="py-4 px-6">
-                      <div class="flex items-center gap-3">
-                        <img
-                          src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff"
-                          alt="John Doe"
-                          class="w-8 h-8 rounded-full"
-                        />
-                        <div>
-                          <p
-                            class="text-sm font-medium dark:text-white text-gray-900"
-                          >
-                            John Doe
-                          </p>
-                          <p class="text-sm dark:text-gray-400 text-gray-600">
-                            john@example.com
-                          </p>
-                        </div>
+                      <div>
+                        <p
+                          class="text-sm font-medium dark:text-white text-gray-900"
+                        >
+                          Update user dashboard
+                        </p>
+                        <p class="text-sm dark:text-gray-400 text-gray-600">
+                          Implement new analytics charts
+                        </p>
                       </div>
                     </td>
                     <td class="py-4 px-6">
                       <span
-                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-400"
                       >
-                        Admin
+                        High
                       </span>
                     </td>
                     <td class="py-4 px-6">
                       <span
-                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-500/10 dark:text-yellow-400"
                       >
-                        Active
+                        In Progress
                       </span>
                     </td>
                     <td class="py-4 px-6">
                       <span class="text-sm dark:text-gray-400 text-gray-600"
-                        >2 minutes ago</span
+                        >Tomorrow</span
                       >
                     </td>
                     <td class="py-4 px-6">
                       <div class="flex items-center justify-end gap-2">
-                        <!-- View Button -->
-                        <button
-                          class="group relative p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-input text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                          title="View Details"
-                        >
-                          <i class="fas fa-eye"></i>
-                          <!-- Tooltip -->
-                          <span
-                            class="absolute hidden group-hover:block -top-10 -left-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md whitespace-nowrap"
-                          >
-                            View Details
-                          </span>
-                        </button>
-
                         <!-- Edit Button -->
                         <button
                           class="group relative p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 text-blue-500 transition-colors"
-                          title="Edit User"
                         >
                           <i class="fas fa-edit"></i>
-                          <!-- Tooltip -->
                           <span
                             class="absolute hidden group-hover:block -top-10 -left-2 px-2 py-1 text-xs text-white bg-gray-900 rounded-md whitespace-nowrap"
                           >
-                            Edit User
+                            Edit Task
                           </span>
                         </button>
 
@@ -695,7 +671,6 @@
                           >
                             <i class="fas fa-ellipsis-v"></i>
                           </button>
-                          <!-- Dropdown Menu -->
                           <div
                             class="hidden absolute right-0 mt-1 w-48 bg-white dark:bg-dark-surface rounded-lg shadow-lg border dark:border-gray-800/50 border-gray-100 py-1 z-50"
                           >
@@ -703,17 +678,15 @@
                               href="#"
                               class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-input"
                             >
-                              <i class="fas fa-key w-5 text-gray-400"></i>
-                              <span>Reset Password</span>
+                              <i class="fas fa-check w-5 text-gray-400"></i>
+                              <span>Mark Complete</span>
                             </a>
                             <a
                               href="#"
                               class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-input"
                             >
-                              <i
-                                class="fas fa-user-shield w-5 text-gray-400"
-                              ></i>
-                              <span>Change Role</span>
+                              <i class="fas fa-user w-5 text-gray-400"></i>
+                              <span>Assign User</span>
                             </a>
                             <div
                               class="border-t dark:border-gray-800/50 border-gray-100 my-1"
@@ -723,7 +696,7 @@
                               class="flex items-center px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-dark-input"
                             >
                               <i class="fas fa-trash w-5"></i>
-                              <span>Delete User</span>
+                              <span>Delete Task</span>
                             </a>
                           </div>
                         </div>
@@ -731,89 +704,18 @@
                     </td>
                   </tr>
 
-                  <!-- Add more user rows with different data -->
-                  <!-- Copy and modify the user row above for more entries -->
+                  <!-- Add more task rows here -->
                 </tbody>
               </table>
             </div>
 
-            <!-- Pagination -->
-            <div class="border-t dark:border-gray-800/50 border-gray-100">
-              <div class="px-6 py-3.5 flex items-center justify-between">
-                <!-- Left side: Results info and Items per page -->
-                <div class="flex items-center gap-6">
-                  <!-- Items per page selector -->
-                  <div class="flex items-center gap-3">
-                    <select
-                      class="h-9 pl-3 pr-8 text-sm rounded-lg dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-600 focus:ring-1 focus:ring-blue-500 cursor-pointer"
-                    >
-                      <option value="10">10 rows</option>
-                      <option value="20">20 rows</option>
-                      <option value="50">50 rows</option>
-                      <option value="100">100 rows</option>
-                    </select>
-                    <span class="text-sm dark:text-gray-400 text-gray-500"
-                      >per page</span
-                    >
-                  </div>
-
-                  <!-- Results info -->
-                  <p class="text-sm dark:text-gray-400 text-gray-500">
-                    1-10 of 100 items
-                  </p>
-                </div>
-
-                <!-- Right side: Pagination buttons -->
-                <div class="flex items-center">
-                  <!-- Page navigation -->
-                  <nav class="flex items-center gap-1" aria-label="Pagination">
-                    <button
-                      class="p-2 rounded-lg dark:text-gray-400 text-gray-500 hover:bg-gray-100 dark:hover:bg-dark-input disabled:opacity-50 disabled:cursor-not-allowed"
-                      disabled
-                    >
-                      <i class="fas fa-chevron-left text-sm"></i>
-                    </button>
-
-                    <button
-                      class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm bg-blue-500 text-white hover:bg-blue-600"
-                    >
-                      1
-                    </button>
-                    <button
-                      class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
-                    >
-                      2
-                    </button>
-                    <button
-                      class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
-                    >
-                      3
-                    </button>
-                    <button
-                      class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600"
-                    >
-                      ...
-                    </button>
-                    <button
-                      class="min-w-[36px] h-9 inline-flex items-center justify-center rounded-lg text-sm dark:text-gray-400 text-gray-600 hover:bg-gray-100 dark:hover:bg-dark-input"
-                    >
-                      10
-                    </button>
-
-                    <button
-                      class="p-2 rounded-lg dark:text-gray-400 text-gray-500 hover:bg-gray-100 dark:hover:bg-dark-input"
-                    >
-                      <i class="fas fa-chevron-right text-sm"></i>
-                    </button>
-                  </nav>
-                </div>
-              </div>
-            </div>
+            <!-- Pagination - Same as users.html -->
           </div>
         </div>
       </main>
     </div>
 
+    <!-- Scripts - Same as users.html -->
     <script>
       // Theme toggle functionality
       const themeToggle = document.getElementById("theme-toggle");
@@ -896,66 +798,6 @@
       notificationsDropdown.addEventListener("click", (e) => {
         e.stopPropagation();
       });
-
-      function toggleDropdown(event, button) {
-        event.stopPropagation();
-
-        const dropdown = button.nextElementSibling;
-        const isCurrentlyOpen = !dropdown.classList.contains("hidden");
-
-        // Close all other dropdowns first
-        document
-          .querySelectorAll('.relative > div[class*="absolute"]')
-          .forEach((otherDropdown) => {
-            if (!otherDropdown.classList.contains("hidden")) {
-              otherDropdown.classList.add("hidden");
-            }
-          });
-
-        // If current dropdown was open, just keep it closed (we already closed it above)
-        if (isCurrentlyOpen) {
-          return;
-        }
-
-        // Open current dropdown and position it
-        dropdown.classList.remove("hidden");
-
-        const rect = button.getBoundingClientRect();
-        const dropdownRect = dropdown.getBoundingClientRect();
-        const viewportWidth = window.innerWidth;
-
-        // Check if dropdown would go off the right edge
-        if (rect.right + dropdownRect.width > viewportWidth) {
-          dropdown.style.right = "0";
-          dropdown.style.left = "auto";
-        } else {
-          dropdown.style.right = "auto";
-          dropdown.style.left = "0";
-        }
-
-        // Position dropdown below the button
-        dropdown.style.top = `${rect.height}px`;
-      }
-
-      // Close dropdowns when clicking outside
-      document.addEventListener("click", () => {
-        document
-          .querySelectorAll('.relative > div[class*="absolute"]')
-          .forEach((dropdown) => {
-            if (!dropdown.classList.contains("hidden")) {
-              dropdown.classList.add("hidden");
-            }
-          });
-      });
-
-      // Prevent dropdown from closing when clicking inside
-      document
-        .querySelectorAll('.relative > div[class*="absolute"]')
-        .forEach((dropdown) => {
-          dropdown.addEventListener("click", (e) => {
-            e.stopPropagation();
-          });
-        });
     </script>
   </body>
 </html>
