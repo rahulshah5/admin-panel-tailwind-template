@@ -471,54 +471,50 @@
         </header>
         <!-- Profile Content -->
         <div class="p-6 space-y-6">
-          <!-- Profile Header -->
+          <!-- Profile Header Card -->
           <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50 overflow-hidden"
           >
-            <div class="p-6">
-              <div class="flex flex-col sm:flex-row items-center gap-6">
-                <!-- Profile Image -->
-                <div class="relative group">
+            <!-- Cover Image -->
+            <div
+              class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 relative"
+            >
+              <button
+                class="absolute bottom-4 right-4 p-2 rounded-lg bg-black/20 hover:bg-black/30 text-white transition-colors"
+              >
+                <i class="fas fa-camera"></i>
+              </button>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="px-6 pb-6">
+              <div class="flex flex-col sm:flex-row sm:items-end gap-4 -mt-12">
+                <!-- Avatar -->
+                <div class="relative">
                   <img
                     src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff&size=128"
                     alt="Profile"
-                    class="w-32 h-32 rounded-xl"
+                    class="w-24 h-24 sm:w-32 sm:h-32 rounded-xl ring-4 ring-white dark:ring-dark-surface"
                   />
                   <button
-                    class="absolute inset-0 flex items-center justify-center bg-black/50 text-white opacity-0 group-hover:opacity-100 rounded-xl transition-opacity"
+                    class="absolute bottom-2 right-2 p-1.5 rounded-lg bg-black/20 hover:bg-black/30 text-white transition-colors"
                   >
-                    <i class="fas fa-camera"></i>
+                    <i class="fas fa-camera text-sm"></i>
                   </button>
                 </div>
 
-                <!-- Profile Info -->
-                <div class="flex-1 text-center sm:text-left">
+                <!-- Info -->
+                <div class="flex-1">
                   <h1 class="text-2xl font-semibold dark:text-white">
                     John Doe
                   </h1>
-                  <p class="text-sm dark:text-gray-400 text-gray-600 mt-1">
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
                     Administrator
                   </p>
-                  <div
-                    class="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-4"
-                  >
-                    <span
-                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-sm bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
-                    >
-                      <i class="fas fa-envelope text-xs"></i>
-                      john@example.com
-                    </span>
-                    <span
-                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-sm bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
-                    >
-                      <i class="fas fa-circle text-[8px]"></i>
-                      Online
-                    </span>
-                  </div>
                 </div>
 
                 <!-- Actions -->
-                <div class="flex gap-3">
+                <div class="flex gap-3 sm:self-center">
                   <button
                     class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                   >
@@ -531,111 +527,176 @@
                   </button>
                 </div>
               </div>
+
+              <!-- Stats -->
+              <div
+                class="grid grid-cols-3 gap-4 mt-6 pt-6 border-t dark:border-gray-800/50 border-gray-100"
+              >
+                <div class="text-center">
+                  <p class="text-2xl font-semibold dark:text-white">152</p>
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    Projects
+                  </p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-semibold dark:text-white">284</p>
+                  <p class="text-sm dark:text-gray-400 text-gray-600">Tasks</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-semibold dark:text-white">43</p>
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    Team Members
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Profile Details -->
+          <!-- Content Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- Personal Information -->
-            <div
-              class="lg:col-span-2 bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-            >
-              <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-                <h2 class="text-lg font-medium dark:text-white">
-                  Personal Information
-                </h2>
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-6">
+              <!-- About -->
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+              >
+                <div
+                  class="p-6 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <h2 class="text-lg font-medium dark:text-white">About</h2>
+                </div>
+                <div class="p-6">
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    Administrator with 5+ years of experience in system
+                    management and team leadership. Passionate about building
+                    efficient systems and fostering team collaboration.
+                  </p>
+
+                  <!-- Contact Info -->
+                  <div class="mt-6 space-y-4">
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center"
+                      >
+                        <i class="fas fa-envelope text-blue-500"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">Email</p>
+                        <p class="text-sm dark:text-gray-400 text-gray-600">
+                          john@example.com
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center"
+                      >
+                        <i class="fas fa-phone text-green-500"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">Phone</p>
+                        <p class="text-sm dark:text-gray-400 text-gray-600">
+                          +1 (555) 123-4567
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                      >
+                        <i class="fas fa-map-marker-alt text-purple-500"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">
+                          Location
+                        </p>
+                        <p class="text-sm dark:text-gray-400 text-gray-600">
+                          San Francisco, CA
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="p-6">
-                <form class="space-y-6">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <!-- First Name -->
-                    <div>
-                      <label
-                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
-                      >
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        value="John"
-                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
-                    </div>
 
-                    <!-- Last Name -->
-                    <div>
-                      <label
-                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
-                      >
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        value="Doe"
-                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
+              <!-- Recent Activity -->
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+              >
+                <div
+                  class="p-6 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <h2 class="text-lg font-medium dark:text-white">
+                    Recent Activity
+                  </h2>
+                </div>
+                <div class="divide-y dark:divide-gray-800/50 divide-gray-100">
+                  <!-- Activity Items -->
+                  <div class="p-6 flex gap-4">
+                    <div
+                      class="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0"
+                    >
+                      <i class="fas fa-tasks text-blue-500"></i>
                     </div>
-
-                    <!-- Email -->
                     <div>
-                      <label
-                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        value="john@example.com"
-                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
-                    </div>
-
-                    <!-- Phone -->
-                    <div>
-                      <label
-                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
-                      >
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        value="+1 (555) 123-4567"
-                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
+                      <p class="text-sm dark:text-white">
+                        <span class="font-medium">Completed task:</span>
+                        <span class="dark:text-gray-400 text-gray-600"
+                          >Update dashboard analytics</span
+                        >
+                      </p>
+                      <p class="text-xs dark:text-gray-400 text-gray-500 mt-1">
+                        2 hours ago
+                      </p>
                     </div>
                   </div>
 
-                  <!-- Bio -->
-                  <div>
-                    <label
-                      class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  <div class="p-6 flex gap-4">
+                    <div
+                      class="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0"
                     >
-                      Bio
-                    </label>
-                    <textarea
-                      rows="4"
-                      class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    >
-Administrator with 5+ years of experience in system management and team leadership.</textarea
-                    >
+                      <i class="fas fa-user-plus text-green-500"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm dark:text-white">
+                        <span class="font-medium">Added new team member:</span>
+                        <span class="dark:text-gray-400 text-gray-600"
+                          >Sarah Johnson</span
+                        >
+                      </p>
+                      <p class="text-xs dark:text-gray-400 text-gray-500 mt-1">
+                        5 hours ago
+                      </p>
+                    </div>
                   </div>
 
-                  <!-- Save Button -->
-                  <div class="flex justify-end">
-                    <button
-                      type="submit"
-                      class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  <div class="p-6 flex gap-4">
+                    <div
+                      class="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0"
                     >
-                      Save Changes
-                    </button>
+                      <i class="fas fa-comment text-yellow-500"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm dark:text-white">
+                        <span class="font-medium">Commented on:</span>
+                        <span class="dark:text-gray-400 text-gray-600"
+                          >Project requirements document</span
+                        >
+                      </p>
+                      <p class="text-xs dark:text-gray-400 text-gray-500 mt-1">
+                        Yesterday
+                      </p>
+                    </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
 
-            <!-- Account Settings -->
+            <!-- Right Column -->
             <div class="space-y-6">
-              <!-- Password Change -->
+              <!-- Account Settings -->
               <div
                 class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
               >
@@ -643,62 +704,80 @@ Administrator with 5+ years of experience in system management and team leadersh
                   class="p-6 border-b dark:border-gray-800/50 border-gray-100"
                 >
                   <h2 class="text-lg font-medium dark:text-white">
-                    Change Password
+                    Account Settings
                   </h2>
                 </div>
-                <div class="p-6">
-                  <form class="space-y-4">
-                    <!-- Current Password -->
-                    <div>
-                      <label
-                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                <div class="p-6 space-y-6">
+                  <!-- Settings List -->
+                  <a
+                    href="#"
+                    class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center"
                       >
-                        Current Password
-                      </label>
-                      <input
-                        type="password"
-                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
+                        <i class="fas fa-lock text-blue-500"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">
+                          Password
+                        </p>
+                        <p class="text-xs dark:text-gray-400 text-gray-600">
+                          Change your password
+                        </p>
+                      </div>
                     </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                  </a>
 
-                    <!-- New Password -->
-                    <div>
-                      <label
-                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  <a
+                    href="#"
+                    class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center"
                       >
-                        New Password
-                      </label>
-                      <input
-                        type="password"
-                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
+                        <i class="fas fa-bell text-purple-500"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">
+                          Notifications
+                        </p>
+                        <p class="text-xs dark:text-gray-400 text-gray-600">
+                          Manage notifications
+                        </p>
+                      </div>
                     </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                  </a>
 
-                    <!-- Confirm Password -->
-                    <div>
-                      <label
-                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  <a
+                    href="#"
+                    class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center"
                       >
-                        Confirm Password
-                      </label>
-                      <input
-                        type="password"
-                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      />
+                        <i class="fas fa-shield-alt text-green-500"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">
+                          Security
+                        </p>
+                        <p class="text-xs dark:text-gray-400 text-gray-600">
+                          Security settings
+                        </p>
+                      </div>
                     </div>
-
-                    <!-- Update Button -->
-                    <button
-                      type="submit"
-                      class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                    >
-                      Update Password
-                    </button>
-                  </form>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                  </a>
                 </div>
               </div>
 
-              <!-- Notifications Settings -->
+              <!-- Connected Accounts -->
               <div
                 class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
               >
@@ -706,45 +785,41 @@ Administrator with 5+ years of experience in system management and team leadersh
                   class="p-6 border-b dark:border-gray-800/50 border-gray-100"
                 >
                   <h2 class="text-lg font-medium dark:text-white">
-                    Notifications
+                    Connected Accounts
                   </h2>
                 </div>
                 <div class="p-6 space-y-4">
-                  <!-- Email Notifications -->
                   <div class="flex items-center justify-between">
-                    <div>
-                      <p class="text-sm font-medium dark:text-white">
-                        Email Notifications
-                      </p>
-                      <p class="text-sm dark:text-gray-400 text-gray-600">
-                        Receive email about your account activity
-                      </p>
+                    <div class="flex items-center gap-3">
+                      <i class="fab fa-github text-2xl"></i>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">
+                          GitHub
+                        </p>
+                        <p class="text-xs dark:text-gray-400 text-gray-600">
+                          Connected
+                        </p>
+                      </div>
                     </div>
-                    <button
-                      class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-blue-500"
-                    >
-                      <span
-                        class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
-                      ></span>
+                    <button class="text-sm text-red-500 hover:text-red-600">
+                      Disconnect
                     </button>
                   </div>
 
-                  <!-- Push Notifications -->
                   <div class="flex items-center justify-between">
-                    <div>
-                      <p class="text-sm font-medium dark:text-white">
-                        Push Notifications
-                      </p>
-                      <p class="text-sm dark:text-gray-400 text-gray-600">
-                        Receive notifications in your browser
-                      </p>
+                    <div class="flex items-center gap-3">
+                      <i class="fab fa-google text-2xl"></i>
+                      <div>
+                        <p class="text-sm font-medium dark:text-white">
+                          Google
+                        </p>
+                        <p class="text-xs dark:text-gray-400 text-gray-600">
+                          Not connected
+                        </p>
+                      </div>
                     </div>
-                    <button
-                      class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700"
-                    >
-                      <span
-                        class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
-                      ></span>
+                    <button class="text-sm text-blue-500 hover:text-blue-600">
+                      Connect
                     </button>
                   </div>
                 </div>

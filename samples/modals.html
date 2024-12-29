@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <!-- Copy head section from other sample pages -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Samples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                bg: "#0f172a",
+                surface: "#1e293b",
+                input: "#334155",
+              },
+              light: {
+                bg: "#f8fafc",
+                surface: "#ffffff",
+                input: "#f8fafc",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="dark:bg-dark-bg bg-light-bg transition-colors">
+    <div class="flex min-h-screen">
+      <aside class="w-20 lg:w-72 h-screen fixed transition-all">
+        <div
+          class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
+        >
+          <!-- Logo -->
+          <div
+            class="h-16 flex items-center gap-3 px-6 border-b dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center"
+            >
+              <i class="fas fa-bolt text-white"></i>
+            </div>
+            <div class="hidden lg:block">
+              <h1 class="font-semibold text-base dark:text-white">
+                Admin Panel
+              </h1>
+              <p class="text-xs dark:text-gray-400 text-gray-500">
+                Enterprise Suite
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div
+            class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
+          >
+            <!-- Main Navigation -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Main
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="../dashboard.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-home group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Overview</span
+                  >
+                </a>
+                <a
+                  href="../users.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-users group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Users</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- Management -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Management
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-folder group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Projects</span
+                  >
+                </a>
+
+                <a
+                  href="../tasks.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tasks group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tasks</span
+                  >
+                </a>
+
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-calendar group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Calendar</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- UI Samples -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                UI Samples
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="table.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-table group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tables</span
+                  >
+                </a>
+                <a
+                  href="buttons.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-square group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Buttons</span
+                  >
+                </a>
+                <a
+                  href="modals.html"
+                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+                >
+                  <i class="fas fa-box text-blue-500"></i>
+                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                    >Modal</span
+                  >
+                </a>
+                <a
+                  href="badges.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tag group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Badges</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- Settings -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Settings
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-cog group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Preferences</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-shield-alt group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Security</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <div class="h-6"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="ml-20 lg:ml-72 flex-1">
+        <!-- Header -->
+        <header
+          class="h-16 flex items-center justify-between px-6 border-b dark:border-gray-800/50 border-gray-100 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-10"
+        >
+          <div class="flex items-center space-x-6">
+            <div
+              class="hidden sm:flex items-center text-sm dark:text-gray-400 text-gray-600"
+            >
+              <a href="#" class="hover:text-blue-500">UI Samples</a>
+              <i class="fas fa-chevron-right text-xs mx-2 text-gray-400"></i>
+              <span class="text-gray-900 dark:text-white font-medium"
+                >Modals</span
+              >
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="flex items-center space-x-4">
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
+            >
+              <i class="fas fa-sun hidden dark:inline-block"></i>
+              <i class="fas fa-moon dark:hidden"></i>
+            </button>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="p-6 space-y-6">
+          <!-- Basic Modals -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Basic Modals</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Simple modal dialogs
+              </p>
+            </div>
+            <div class="p-6 space-x-4">
+              <!-- Small Modal -->
+              <button
+                onclick="openModal('small-modal')"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Small Modal
+              </button>
+
+              <!-- Medium Modal -->
+              <button
+                onclick="openModal('medium-modal')"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Medium Modal
+              </button>
+
+              <!-- Large Modal -->
+              <button
+                onclick="openModal('large-modal')"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Large Modal
+              </button>
+            </div>
+          </div>
+
+          <!-- Modal Types -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Modal Types</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Different modal variations
+              </p>
+            </div>
+            <div class="p-6 space-x-4">
+              <!-- Alert Modal -->
+              <button
+                onclick="openModal('alert-modal')"
+                class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
+              >
+                Alert Modal
+              </button>
+
+              <!-- Confirmation Modal -->
+              <button
+                onclick="openModal('confirm-modal')"
+                class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
+              >
+                Confirmation Modal
+              </button>
+
+              <!-- Form Modal -->
+              <button
+                onclick="openModal('form-modal')"
+                class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+              >
+                Form Modal
+              </button>
+            </div>
+          </div>
+
+          <!-- Modal Positions -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Modal Positions
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Different modal positioning variations
+              </p>
+            </div>
+            <div class="p-6 space-x-4">
+              <!-- Top Modal -->
+              <button
+                onclick="openModal('top-modal')"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Top Modal
+              </button>
+
+              <!-- Center Modal -->
+              <button
+                onclick="openModal('center-modal')"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Center Modal
+              </button>
+
+              <!-- Bottom Modal -->
+              <button
+                onclick="openModal('bottom-modal')"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Bottom Modal
+              </button>
+
+              <!-- Side Modal -->
+              <button
+                onclick="openModal('side-modal')"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Side Modal
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Templates -->
+        <!-- Small Modal -->
+        <div id="small-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 text-center">
+            <div
+              class="fixed inset-0"
+              onclick="closeModal('small-modal')"
+            ></div>
+
+            <div
+              class="inline-block align-middle my-8 w-full max-w-md text-left"
+            >
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium dark:text-white">
+                      Small Modal Title
+                    </h3>
+                    <button
+                      onclick="closeModal('small-modal')"
+                      class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="px-6 py-4">
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    This is a small modal dialog. It's perfect for simple
+                    messages and quick actions.
+                  </p>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+                >
+                  <button
+                    onclick="closeModal('small-modal')"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    Confirm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium Modal -->
+        <div id="medium-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 text-center">
+            <div
+              class="fixed inset-0"
+              onclick="closeModal('medium-modal')"
+            ></div>
+
+            <div
+              class="inline-block align-middle my-8 w-full max-w-lg text-left"
+            >
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium dark:text-white">
+                      Medium Modal Title
+                    </h3>
+                    <button
+                      onclick="closeModal('medium-modal')"
+                      class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="px-6 py-4">
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    This is a medium-sized modal dialog. It provides more space
+                    for content while maintaining a clean layout.
+                  </p>
+                  <div class="mt-4">
+                    <p class="text-sm dark:text-gray-400 text-gray-600">
+                      Additional content can be added here to demonstrate the
+                      increased space available in a medium modal.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+                >
+                  <button
+                    onclick="closeModal('medium-modal')"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    Confirm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Large Modal -->
+        <div id="large-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 text-center">
+            <div
+              class="fixed inset-0"
+              onclick="closeModal('large-modal')"
+            ></div>
+
+            <div
+              class="inline-block align-middle my-8 w-full max-w-4xl text-left"
+            >
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium dark:text-white">
+                      Large Modal Title
+                    </h3>
+                    <button
+                      onclick="closeModal('large-modal')"
+                      class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="px-6 py-4">
+                  <div class="grid grid-cols-2 gap-6">
+                    <div>
+                      <h4 class="text-base font-medium dark:text-white mb-3">
+                        Left Column
+                      </h4>
+                      <p class="text-sm dark:text-gray-400 text-gray-600">
+                        This large modal provides ample space for complex
+                        layouts and rich content. You can organize content in
+                        multiple columns and sections.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="text-base font-medium dark:text-white mb-3">
+                        Right Column
+                      </h4>
+                      <p class="text-sm dark:text-gray-400 text-gray-600">
+                        Perfect for displaying detailed information, data
+                        tables, forms, or any content that requires more screen
+                        real estate.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+                >
+                  <button
+                    onclick="closeModal('large-modal')"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    Confirm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div id="confirm-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 text-center">
+            <div
+              class="fixed inset-0"
+              onclick="closeModal('confirm-modal')"
+            ></div>
+
+            <div
+              class="inline-block align-middle my-8 w-full max-w-md text-left"
+            >
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <div class="p-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-12 h-12 rounded-full bg-yellow-100 dark:bg-yellow-500/10 flex items-center justify-center flex-shrink-0"
+                    >
+                      <i
+                        class="fas fa-question-circle text-yellow-500 text-xl"
+                      ></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-medium dark:text-white">
+                        Confirm Action
+                      </h3>
+                      <p class="mt-2 text-sm dark:text-gray-400 text-gray-600">
+                        Are you sure you want to proceed with this action?
+                        Please confirm your choice.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex justify-end gap-3">
+                    <button
+                      onclick="closeModal('confirm-modal')"
+                      class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
+                    >
+                      Confirm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Modal -->
+        <div id="form-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 text-center">
+            <div class="fixed inset-0" onclick="closeModal('form-modal')"></div>
+
+            <div
+              class="inline-block align-middle my-8 w-full max-w-2xl text-left"
+            >
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium dark:text-white">
+                      Add New User
+                    </h3>
+                    <button
+                      onclick="closeModal('form-modal')"
+                      class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Form Content -->
+                <div class="px-6 py-4">
+                  <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                      <div>
+                        <label
+                          class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                        >
+                          First Name
+                        </label>
+                        <input
+                          type="text"
+                          class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                        >
+                          Last Name
+                        </label>
+                        <input
+                          type="text"
+                          class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        Role
+                      </label>
+                      <select
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      >
+                        <option value="">Select role</option>
+                        <option value="admin">Administrator</option>
+                        <option value="user">User</option>
+                        <option value="editor">Editor</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+                >
+                  <button
+                    onclick="closeModal('form-modal')"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    Add User
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert Modal -->
+        <div id="alert-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 text-center">
+            <div
+              class="fixed inset-0"
+              onclick="closeModal('alert-modal')"
+            ></div>
+
+            <div
+              class="inline-block align-middle my-8 w-full max-w-md text-left"
+            >
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <div class="p-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-12 h-12 rounded-full bg-red-100 dark:bg-red-500/10 flex items-center justify-center flex-shrink-0"
+                    >
+                      <i
+                        class="fas fa-exclamation-triangle text-red-500 text-xl"
+                      ></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-medium dark:text-white">
+                        Delete Confirmation
+                      </h3>
+                      <p class="mt-2 text-sm dark:text-gray-400 text-gray-600">
+                        Are you sure you want to delete this item? This action
+                        cannot be undone.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex justify-end gap-3">
+                    <button
+                      onclick="closeModal('alert-modal')"
+                      class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Modal -->
+        <div id="top-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4">
+            <div class="fixed inset-0" onclick="closeModal('top-modal')"></div>
+
+            <div class="w-full max-w-lg mx-auto mt-8">
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium dark:text-white">
+                      Top Modal
+                    </h3>
+                    <button
+                      onclick="closeModal('top-modal')"
+                      class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="px-6 py-4">
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    This modal appears at the top of the screen.
+                  </p>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+                >
+                  <button
+                    onclick="closeModal('top-modal')"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Modal -->
+        <div id="center-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 text-center">
+            <div
+              class="fixed inset-0"
+              onclick="closeModal('center-modal')"
+            ></div>
+
+            <div class="inline-block align-middle my-8 w-full max-w-lg">
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium dark:text-white">
+                      Center Modal
+                    </h3>
+                    <button
+                      onclick="closeModal('center-modal')"
+                      class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="px-6 py-4">
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    This modal appears in the center of the screen.
+                  </p>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+                >
+                  <button
+                    onclick="closeModal('center-modal')"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Modal -->
+        <div id="bottom-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen px-4 flex items-end">
+            <div
+              class="fixed inset-0"
+              onclick="closeModal('bottom-modal')"
+            ></div>
+
+            <div class="w-full max-w-lg mx-auto mb-8 relative">
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl shadow-xl transform transition-all"
+              >
+                <!-- Header -->
+                <div
+                  class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-medium dark:text-white">
+                      Bottom Modal
+                    </h3>
+                    <button
+                      onclick="closeModal('bottom-modal')"
+                      class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="px-6 py-4">
+                  <p class="text-sm dark:text-gray-400 text-gray-600">
+                    This modal appears at the bottom of the screen.
+                  </p>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+                >
+                  <button
+                    onclick="closeModal('bottom-modal')"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Modal -->
+        <div id="side-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+          <div class="min-h-screen flex justify-end">
+            <div class="fixed inset-0" onclick="closeModal('side-modal')"></div>
+
+            <div
+              class="w-full max-w-md relative bg-white dark:bg-dark-surface shadow-xl"
+            >
+              <!-- Header -->
+              <div
+                class="px-6 py-4 border-b dark:border-gray-800/50 border-gray-100"
+              >
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-medium dark:text-white">
+                    Side Modal
+                  </h3>
+                  <button
+                    onclick="closeModal('side-modal')"
+                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                  >
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="px-6 py-4">
+                <p class="text-sm dark:text-gray-400 text-gray-600">
+                  This modal slides in from the right side of the screen.
+                </p>
+              </div>
+
+              <!-- Footer -->
+              <div
+                class="px-6 py-4 border-t dark:border-gray-800/50 border-gray-100 flex justify-end gap-3"
+              >
+                <button
+                  onclick="closeModal('side-modal')"
+                  class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      // Modal functionality
+      function openModal(modalId) {
+        document.getElementById(modalId).classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        if (event.target.classList.contains("fixed")) {
+          event.target.parentElement.parentElement.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }
+      };
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          const modals = document.querySelectorAll('[id$="-modal"]');
+          modals.forEach((modal) => {
+            if (!modal.classList.contains("hidden")) {
+              modal.classList.add("hidden");
+              document.body.style.overflow = "auto";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
