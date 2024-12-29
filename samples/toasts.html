@@ -34,10 +34,445 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="dark:bg-dark-bg bg-light-bg transition-colors">
-    <!-- Copy sidebar structure but update active state for Toasts -->
+    <aside class="w-20 lg:w-72 h-screen fixed transition-all">
+      <div
+        class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
+      >
+        <!-- Logo -->
+        <div
+          class="h-16 flex items-center gap-3 px-6 border-b dark:border-gray-800/50 border-gray-100"
+        >
+          <div
+            class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center"
+          >
+            <i class="fas fa-bolt text-white"></i>
+          </div>
+          <div class="hidden lg:block">
+            <h1 class="font-semibold text-base dark:text-white">Admin Panel</h1>
+            <p class="text-xs dark:text-gray-400 text-gray-500">
+              Enterprise Suite
+            </p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div
+          class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
+        >
+          <!-- Main Navigation -->
+          <div>
+            <p
+              class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+            >
+              Main
+            </p>
+            <nav class="space-y-1">
+              <a
+                href="../dashboard.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-home group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Overview</span
+                >
+              </a>
+              <a
+                href="../users.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-users group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Users</span
+                >
+              </a>
+            </nav>
+          </div>
+
+          <!-- Management -->
+          <div>
+            <p
+              class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+            >
+              Management
+            </p>
+            <nav class="space-y-1">
+              <a
+                href="../tasks.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-tasks group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Tasks</span
+                >
+              </a>
+            </nav>
+          </div>
+
+          <!-- UI Samples -->
+          <div>
+            <p
+              class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+            >
+              UI Samples
+            </p>
+            <nav class="space-y-1">
+              <a
+                href="badges.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-tag group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Badges</span
+                >
+              </a>
+              <a
+                href="buttons.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-hand-pointer group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Buttons</span
+                >
+              </a>
+              <a
+                href="forms.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-file-alt group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Forms</span
+                >
+              </a>
+
+              <a
+                href="modals.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-box group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Modal</span
+                >
+              </a>
+              <a
+                href="select.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-caret-down group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Select</span
+                >
+              </a>
+              <a
+                href="table.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-table group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Tables</span
+                >
+              </a>
+              <a
+                href="toasts.html"
+                class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+              >
+                <i class="fas fa-bell text-blue-500"></i>
+                <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                  >Toasts</span
+                >
+              </a>
+            </nav>
+          </div>
+
+          <!-- Settings -->
+          <div>
+            <p
+              class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+            >
+              Settings
+            </p>
+            <nav class="space-y-1">
+              <a
+                href="../profile.html"
+                class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+              >
+                <i
+                  class="fas fa-user group-hover:text-blue-500 transition-colors"
+                ></i>
+                <span
+                  class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                  >Profile</span
+                >
+              </a>
+            </nav>
+          </div>
+
+          <div class="h-6"></div>
+        </div>
+      </div>
+    </aside>
 
     <!-- Main Content -->
     <main class="ml-20 lg:ml-72 flex-1">
+      <header
+        class="h-16 flex items-center justify-between px-6 border-b dark:border-gray-800/50 border-gray-100 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-10"
+      >
+        <!-- Left Section -->
+        <div class="flex items-center space-x-6">
+          <!-- Mobile Menu Button -->
+          <button
+            class="lg:hidden p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Page Title & Breadcrumb -->
+          <div
+            class="hidden sm:flex items-center text-sm dark:text-gray-400 text-gray-600"
+          >
+            <a href="#" class="hover:text-blue-500">UI Samples</a>
+            <i class="fas fa-chevron-right text-xs mx-2 text-gray-400"></i>
+            <span class="text-gray-900 dark:text-white font-medium"
+              >Toasts</span
+            >
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex items-center space-x-4">
+          <!-- Search -->
+          <div class="hidden md:flex items-center">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-64 h-9 pl-9 pr-4 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+              />
+              <i
+                class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="flex items-center space-x-2">
+            <!-- Notifications -->
+            <div class="relative">
+              <button
+                id="notifications-button"
+                class="p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600 relative"
+              >
+                <i class="fas fa-bell"></i>
+                <span
+                  class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"
+                ></span>
+              </button>
+
+              <!-- Notifications Dropdown -->
+              <div
+                id="notifications-dropdown"
+                class="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-dark-surface rounded-lg shadow-lg border dark:border-gray-800/50 border-gray-100 hidden"
+              >
+                <!-- Header -->
+                <div
+                  class="flex items-center justify-between px-4 py-3 border-b dark:border-gray-800/50 border-gray-100"
+                >
+                  <h3 class="font-medium dark:text-white text-gray-900">
+                    Notifications
+                  </h3>
+                  <button
+                    class="text-xs text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    Mark all as read
+                  </button>
+                </div>
+
+                <!-- Notifications List -->
+                <div
+                  class="divide-y dark:divide-gray-800/50 divide-gray-100 max-h-[380px] overflow-y-auto custom-scrollbar"
+                >
+                  <!-- Unread Notification -->
+                  <div
+                    class="p-4 bg-blue-50/50 dark:bg-blue-500/5 hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                  >
+                    <div class="flex gap-3">
+                      <div
+                        class="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <i class="fas fa-user-plus text-blue-500 text-sm"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm dark:text-white text-gray-900">
+                          <span class="font-medium">New user registration</span>
+                          <span class="text-gray-600 dark:text-gray-400">
+                            - John Smith joined the platform.</span
+                          >
+                        </p>
+                        <p
+                          class="text-xs dark:text-gray-400 text-gray-500 mt-1"
+                        >
+                          2 minutes ago
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Read Notification -->
+                  <div
+                    class="p-4 hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                  >
+                    <div class="flex gap-3">
+                      <div
+                        class="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <i class="fas fa-check text-green-500 text-sm"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm dark:text-gray-300 text-gray-600">
+                          System update completed successfully.
+                        </p>
+                        <p
+                          class="text-xs dark:text-gray-400 text-gray-500 mt-1"
+                        >
+                          15 minutes ago
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Another Notification -->
+                  <div
+                    class="p-4 hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                  >
+                    <div class="flex gap-3">
+                      <div
+                        class="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <i class="fas fa-bell text-yellow-500 text-sm"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm dark:text-gray-300 text-gray-600">
+                          Server load exceeding 80% capacity.
+                        </p>
+                        <p
+                          class="text-xs dark:text-gray-400 text-gray-500 mt-1"
+                        >
+                          1 hour ago
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Footer -->
+                <div
+                  class="border-t dark:border-gray-800/50 border-gray-100 p-2"
+                >
+                  <a
+                    href="#"
+                    class="block text-center text-sm text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                  >
+                    View all notifications
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
+            >
+              <i class="fas fa-sun hidden dark:inline-block"></i>
+              <i class="fas fa-moon dark:hidden"></i>
+            </button>
+
+            <!-- Profile Dropdown -->
+            <div class="relative">
+              <button
+                id="profile-menu-button"
+                class="flex items-center space-x-3 p-1.5 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 group"
+              >
+                <img
+                  src="https://ui-avatars.com/api/?name=Admin+User&background=3b82f6&color=fff"
+                  alt="Profile"
+                  class="w-8 h-8 rounded-lg"
+                />
+                <div class="hidden md:block text-left">
+                  <p
+                    class="text-sm font-medium dark:text-white text-gray-900 group-hover:text-blue-500 transition-colors"
+                  >
+                    Admin User
+                  </p>
+                  <p class="text-xs dark:text-gray-400 text-gray-500">
+                    Administrator
+                  </p>
+                </div>
+                <i
+                  class="fas fa-chevron-down text-xs dark:text-gray-400 text-gray-600"
+                ></i>
+              </button>
+
+              <!-- Dropdown Menu -->
+              <div
+                id="profile-dropdown"
+                class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-dark-surface rounded-lg shadow-lg border dark:border-gray-800/50 border-gray-100 py-1 hidden"
+              >
+                <a
+                  href="#"
+                  class="flex items-center space-x-3 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 hover:bg-gray-100 dark:hover:bg-dark-input"
+                >
+                  <i class="fas fa-user w-5"></i>
+                  <span>Profile</span>
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center space-x-3 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 hover:bg-gray-100 dark:hover:bg-dark-input"
+                >
+                  <i class="fas fa-cog w-5"></i>
+                  <span>Settings</span>
+                </a>
+                <div
+                  class="border-t dark:border-gray-800/50 border-gray-100 my-1"
+                ></div>
+                <a
+                  href="#"
+                  class="flex items-center space-x-3 px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                >
+                  <i class="fas fa-sign-out-alt w-5"></i>
+                  <span>Sign out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
       <!-- Content -->
       <div class="p-6 space-y-6">
         <!-- Basic Toasts -->
@@ -98,7 +533,7 @@
           <div class="p-6 space-x-4">
             <!-- Top Right -->
             <button
-              onclick="showToast('top-right-toast')"
+              onclick="showToast('success-toast', 'tr')"
               class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
             >
               Top Right
@@ -106,7 +541,7 @@
 
             <!-- Top Left -->
             <button
-              onclick="showToast('top-left-toast')"
+              onclick="showToast('success-toast', 'tl')"
               class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
             >
               Top Left
@@ -114,7 +549,7 @@
 
             <!-- Bottom Right -->
             <button
-              onclick="showToast('bottom-right-toast')"
+              onclick="showToast('success-toast', 'br')"
               class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
             >
               Bottom Right
@@ -122,7 +557,7 @@
 
             <!-- Bottom Left -->
             <button
-              onclick="showToast('bottom-left-toast')"
+              onclick="showToast('success-toast', 'bl')"
               class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
             >
               Bottom Left
@@ -156,25 +591,25 @@
       <!-- Toast Container - Top Right -->
       <div
         id="toast-container-tr"
-        class="fixed top-4 right-4 z-50 space-y-4"
+        class="fixed top-4 right-4 z-50 space-y-2"
       ></div>
 
       <!-- Toast Container - Top Left -->
       <div
         id="toast-container-tl"
-        class="fixed top-4 left-4 z-50 space-y-4"
+        class="fixed top-4 left-4 z-50 space-y-2"
       ></div>
 
       <!-- Toast Container - Bottom Right -->
       <div
         id="toast-container-br"
-        class="fixed bottom-4 right-4 z-50 space-y-4"
+        class="fixed bottom-4 right-4 z-50 space-y-2"
       ></div>
 
       <!-- Toast Container - Bottom Left -->
       <div
         id="toast-container-bl"
-        class="fixed bottom-4 left-4 z-50 space-y-4"
+        class="fixed bottom-4 left-4 z-50 space-y-2"
       ></div>
 
       <!-- Toast Templates -->
@@ -268,70 +703,6 @@
           </button>
         </div>
       </template>
-
-      <!-- Top Right Toast Template -->
-      <template id="top-right-toast">
-        <div
-          class="bg-blue-500 text-white p-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px] transform transition-all duration-300 opacity-0 translate-x-full"
-        >
-          <i class="fas fa-info-circle text-xl"></i>
-          <p class="flex-1">Top Right Position</p>
-          <button
-            onclick="closeToast(this.parentElement)"
-            class="text-white/80 hover:text-white"
-          >
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </template>
-
-      <!-- Top Left Toast Template -->
-      <template id="top-left-toast">
-        <div
-          class="bg-blue-500 text-white p-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px] transform transition-all duration-300 opacity-0 -translate-x-full"
-        >
-          <i class="fas fa-info-circle text-xl"></i>
-          <p class="flex-1">Top Left Position</p>
-          <button
-            onclick="closeToast(this.parentElement)"
-            class="text-white/80 hover:text-white"
-          >
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </template>
-
-      <!-- Bottom Right Toast Template -->
-      <template id="bottom-right-toast">
-        <div
-          class="bg-blue-500 text-white p-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px] transform transition-all duration-300 opacity-0 translate-y-full"
-        >
-          <i class="fas fa-info-circle text-xl"></i>
-          <p class="flex-1">Bottom Right Position</p>
-          <button
-            onclick="closeToast(this.parentElement)"
-            class="text-white/80 hover:text-white"
-          >
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </template>
-
-      <!-- Bottom Left Toast Template -->
-      <template id="bottom-left-toast">
-        <div
-          class="bg-blue-500 text-white p-4 rounded-lg shadow-lg flex items-center gap-3 min-w-[300px] transform transition-all duration-300 opacity-0 -translate-y-full"
-        >
-          <i class="fas fa-info-circle text-xl"></i>
-          <p class="flex-1">Bottom Left Position</p>
-          <button
-            onclick="closeToast(this.parentElement)"
-            class="text-white/80 hover:text-white"
-          >
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </template>
     </main>
 
     <script>
@@ -344,47 +715,19 @@
 
         container.appendChild(toast);
 
-        // Trigger animation based on position
+        // Trigger animation
         setTimeout(() => {
-          toast.classList.remove("opacity-0");
-          switch (position) {
-            case "tr":
-              toast.classList.remove("translate-x-full");
-              break;
-            case "tl":
-              toast.classList.remove("-translate-x-full");
-              break;
-            case "br":
-              toast.classList.remove("translate-y-full");
-              break;
-            case "bl":
-              toast.classList.remove("-translate-y-full");
-              break;
-          }
+          toast.classList.remove("opacity-0", "translate-x-full");
         }, 10);
 
         // Auto-dismiss after 5 seconds
         setTimeout(() => {
-          closeToast(toast, position);
+          closeToast(toast);
         }, 5000);
       }
 
-      function closeToast(toast, position) {
-        toast.classList.add("opacity-0");
-        switch (position) {
-          case "tr":
-            toast.classList.add("translate-x-full");
-            break;
-          case "tl":
-            toast.classList.add("-translate-x-full");
-            break;
-          case "br":
-            toast.classList.add("translate-y-full");
-            break;
-          case "bl":
-            toast.classList.add("-translate-y-full");
-            break;
-        }
+      function closeToast(toast) {
+        toast.classList.add("opacity-0", "translate-x-full");
         setTimeout(() => {
           toast.remove();
         }, 300);
@@ -394,7 +737,7 @@
         if (action === "view") {
           alert("Viewing message...");
         }
-        closeToast(event.target.closest(".bg-purple-500"), "tr");
+        closeToast(event.target.closest(".bg-purple-500"));
       }
     </script>
   </body>
