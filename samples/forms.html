@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Samples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                bg: "#0f172a",
+                surface: "#1e293b",
+                input: "#334155",
+              },
+              light: {
+                bg: "#f8fafc",
+                surface: "#ffffff",
+                input: "#f8fafc",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark:bg-dark-bg bg-light-bg transition-colors">
+    <div class="flex min-h-screen">
+      <aside class="w-20 lg:w-72 h-screen fixed transition-all">
+        <div
+          class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
+        >
+          <!-- Logo -->
+          <div
+            class="h-16 flex items-center gap-3 px-6 border-b dark:border-gray-800/50 border-gray-100"
+          >
+            <div
+              class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center"
+            >
+              <i class="fas fa-bolt text-white"></i>
+            </div>
+            <div class="hidden lg:block">
+              <h1 class="font-semibold text-base dark:text-white">
+                Admin Panel
+              </h1>
+              <p class="text-xs dark:text-gray-400 text-gray-500">
+                Enterprise Suite
+              </p>
+            </div>
+          </div>
+
+          <!-- Navigation Groups -->
+          <div
+            class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
+          >
+            <!-- Main Navigation -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Main
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="../dashboard.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-home group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Overview</span
+                  >
+                </a>
+                <a
+                  href="../users.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-users group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Users</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- Management -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Management
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-folder group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Projects</span
+                  >
+                </a>
+                <a
+                  href="../tasks.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tasks group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tasks</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-calendar group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Calendar</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- UI Samples -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                UI Samples
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="forms.html"
+                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+                >
+                  <i class="fas fa-file-alt text-blue-500"></i>
+                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                    >Forms</span
+                  >
+                </a>
+                <a
+                  href="table.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-table group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Tables</span
+                  >
+                </a>
+                <a
+                  href="buttons.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-square group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Buttons</span
+                  >
+                </a>
+                <a
+                  href="badges.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-tag group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Badges</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- Settings -->
+            <div>
+              <p
+                class="hidden lg:block px-4 text-xs font-medium dark:text-gray-400 text-gray-500 uppercase tracking-wider mb-3"
+              >
+                Settings
+              </p>
+              <nav class="space-y-1">
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-cog group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Preferences</span
+                  >
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
+                >
+                  <i
+                    class="fas fa-shield-alt group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
+                    >Security</span
+                  >
+                </a>
+              </nav>
+            </div>
+
+            <!-- Add some extra space at the bottom for better scrolling -->
+            <div class="h-6"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="ml-20 lg:ml-72 flex-1">
+        
+        <!-- Header -->
+        <header
+          class="h-16 flex items-center justify-between px-6 border-b dark:border-gray-800/50 border-gray-100 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-10"
+        >
+          <!-- Left Section -->
+          <div class="flex items-center space-x-6">
+            <!-- Mobile Menu Button -->
+            <button
+              class="lg:hidden p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Page Title & Breadcrumb -->
+            <div
+              class="hidden sm:flex items-center text-sm dark:text-gray-400 text-gray-600"
+            >
+              <a href="#" class="hover:text-blue-500">UI Samples</a>
+              <i class="fas fa-chevron-right text-xs mx-2 text-gray-400"></i>
+              <span class="text-gray-900 dark:text-white font-medium"
+                >Forms</span
+              >
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="flex items-center space-x-4">
+            <!-- Search -->
+            <div class="hidden md:flex items-center">
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="w-64 h-9 pl-9 pr-4 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                />
+                <i
+                  class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="flex items-center space-x-2">
+              <!-- Notifications -->
+              <div class="relative">
+                <button
+                  id="notifications-button"
+                  class="p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600 relative"
+                >
+                  <i class="fas fa-bell"></i>
+                  <span
+                    class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"
+                  ></span>
+                </button>
+
+                <!-- Notifications Dropdown -->
+                <div
+                  id="notifications-dropdown"
+                  class="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-dark-surface rounded-lg shadow-lg border dark:border-gray-800/50 border-gray-100 hidden"
+                >
+                  <!-- Header -->
+                  <div
+                    class="flex items-center justify-between px-4 py-3 border-b dark:border-gray-800/50 border-gray-100"
+                  >
+                    <h3 class="font-medium dark:text-white text-gray-900">
+                      Notifications
+                    </h3>
+                    <button
+                      class="text-xs text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                    >
+                      Mark all as read
+                    </button>
+                  </div>
+
+                  <!-- Notifications List -->
+                  <div
+                    class="divide-y dark:divide-gray-800/50 divide-gray-100 max-h-[380px] overflow-y-auto custom-scrollbar"
+                  >
+                    <!-- Unread Notification -->
+                    <div
+                      class="p-4 bg-blue-50/50 dark:bg-blue-500/5 hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                    >
+                      <div class="flex gap-3">
+                        <div
+                          class="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0"
+                        >
+                          <i class="fas fa-user-plus text-blue-500 text-sm"></i>
+                        </div>
+                        <div>
+                          <p class="text-sm dark:text-white text-gray-900">
+                            <span class="font-medium"
+                              >New user registration</span
+                            >
+                            <span class="text-gray-600 dark:text-gray-400">
+                              - John Smith joined the platform.</span
+                            >
+                          </p>
+                          <p
+                            class="text-xs dark:text-gray-400 text-gray-500 mt-1"
+                          >
+                            2 minutes ago
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Read Notification -->
+                    <div
+                      class="p-4 hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                    >
+                      <div class="flex gap-3">
+                        <div
+                          class="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0"
+                        >
+                          <i class="fas fa-check text-green-500 text-sm"></i>
+                        </div>
+                        <div>
+                          <p class="text-sm dark:text-gray-300 text-gray-600">
+                            System update completed successfully.
+                          </p>
+                          <p
+                            class="text-xs dark:text-gray-400 text-gray-500 mt-1"
+                          >
+                            15 minutes ago
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Another Notification -->
+                    <div
+                      class="p-4 hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                    >
+                      <div class="flex gap-3">
+                        <div
+                          class="w-8 h-8 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0"
+                        >
+                          <i class="fas fa-bell text-yellow-500 text-sm"></i>
+                        </div>
+                        <div>
+                          <p class="text-sm dark:text-gray-300 text-gray-600">
+                            Server load exceeding 80% capacity.
+                          </p>
+                          <p
+                            class="text-xs dark:text-gray-400 text-gray-500 mt-1"
+                          >
+                            1 hour ago
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Footer -->
+                  <div
+                    class="border-t dark:border-gray-800/50 border-gray-100 p-2"
+                  >
+                    <a
+                      href="#"
+                      class="block text-center text-sm text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-dark-input transition-colors"
+                    >
+                      View all notifications
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Theme Toggle -->
+              <button
+                id="theme-toggle"
+                class="p-2 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 dark:text-gray-400 text-gray-600"
+              >
+                <i class="fas fa-sun hidden dark:inline-block"></i>
+                <i class="fas fa-moon dark:hidden"></i>
+              </button>
+
+              <!-- Profile Dropdown -->
+              <div class="relative">
+                <button
+                  id="profile-menu-button"
+                  class="flex items-center space-x-3 p-1.5 rounded-lg dark:hover:bg-dark-input hover:bg-gray-100 group"
+                >
+                  <img
+                    src="https://ui-avatars.com/api/?name=Admin+User&background=3b82f6&color=fff"
+                    alt="Profile"
+                    class="w-8 h-8 rounded-lg"
+                  />
+                  <div class="hidden md:block text-left">
+                    <p
+                      class="text-sm font-medium dark:text-white text-gray-900 group-hover:text-blue-500 transition-colors"
+                    >
+                      Admin User
+                    </p>
+                    <p class="text-xs dark:text-gray-400 text-gray-500">
+                      Administrator
+                    </p>
+                  </div>
+                  <i
+                    class="fas fa-chevron-down text-xs dark:text-gray-400 text-gray-600"
+                  ></i>
+                </button>
+
+                <!-- Dropdown Menu -->
+                <div
+                  id="profile-dropdown"
+                  class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-dark-surface rounded-lg shadow-lg border dark:border-gray-800/50 border-gray-100 py-1 hidden"
+                >
+                  <a
+                    href="#"
+                    class="flex items-center space-x-3 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    <i class="fas fa-user w-5"></i>
+                    <span>Profile</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="flex items-center space-x-3 px-4 py-2 text-sm dark:text-gray-300 text-gray-700 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    <i class="fas fa-cog w-5"></i>
+                    <span>Settings</span>
+                  </a>
+                  <div
+                    class="border-t dark:border-gray-800/50 border-gray-100 my-1"
+                  ></div>
+                  <a
+                    href="#"
+                    class="flex items-center space-x-3 px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-dark-input"
+                  >
+                    <i class="fas fa-sign-out-alt w-5"></i>
+                    <span>Sign out</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="p-6 space-y-6">
+          <!-- Basic Form Elements -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Basic Form Elements
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Standard form controls and inputs
+              </p>
+            </div>
+            <div class="p-6">
+              <form class="space-y-6">
+                <!-- Text Input -->
+                <div>
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >
+                    Text Input
+                  </label>
+                  <input
+                    type="text"
+                    class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="Enter text"
+                  />
+                </div>
+
+                <!-- Email Input with Icon -->
+                <div>
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >
+                    Email Input with Icon
+                  </label>
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+                    >
+                      <i class="fas fa-envelope text-gray-400"></i>
+                    </div>
+                    <input
+                      type="email"
+                      class="block w-full pl-11 pr-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                </div>
+
+                <!-- Password Input with Toggle -->
+                <div>
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >
+                    Password with Toggle
+                  </label>
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+                    >
+                      <i class="fas fa-lock text-gray-400"></i>
+                    </div>
+                    <input
+                      type="password"
+                      class="block w-full pl-11 pr-10 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      placeholder="Enter password"
+                    />
+                    <button
+                      type="button"
+                      class="absolute inset-y-0 right-0 pr-3 flex items-center dark:text-gray-400 text-gray-500 dark:hover:text-gray-300 hover:text-gray-700"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Select Input -->
+                <div>
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >
+                    Select Input
+                  </label>
+                  <select
+                    class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  >
+                    <option value="">Select an option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+
+                <!-- Textarea -->
+                <div>
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >
+                    Textarea
+                  </label>
+                  <textarea
+                    rows="4"
+                    class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="w-4 h-4 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded text-blue-500 focus:ring-2 focus:ring-blue-500"
+                  />
+                  <label class="ml-2 text-sm dark:text-gray-300 text-gray-700">
+                    I agree to the terms
+                  </label>
+                </div>
+
+                <!-- Radio Buttons -->
+                <div class="space-y-2">
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >
+                    Radio Options
+                  </label>
+                  <div class="flex items-center gap-4">
+                    <div class="flex items-center">
+                      <input
+                        type="radio"
+                        name="radio-group"
+                        class="w-4 h-4 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 text-blue-500 focus:ring-2 focus:ring-blue-500"
+                      />
+                      <label
+                        class="ml-2 text-sm dark:text-gray-300 text-gray-700"
+                      >
+                        Option 1
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input
+                        type="radio"
+                        name="radio-group"
+                        class="w-4 h-4 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 text-blue-500 focus:ring-2 focus:ring-blue-500"
+                      />
+                      <label
+                        class="ml-2 text-sm dark:text-gray-300 text-gray-700"
+                      >
+                        Option 2
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Toggle Switch -->
+                <div class="flex items-center justify-between">
+                  <span class="text-sm dark:text-gray-300 text-gray-700"
+                    >Enable notifications</span
+                  >
+                  <button
+                    type="button"
+                    class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700"
+                    role="switch"
+                  >
+                    <span
+                      class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                    ></span>
+                  </button>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="flex items-center justify-end gap-4 pt-4">
+                  <button
+                    type="button"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Form Validation States -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Form Validation States
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Input fields with different validation states
+              </p>
+            </div>
+            <div class="p-6 space-y-6">
+              <!-- Success State -->
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5"
+                >
+                  Success Input
+                </label>
+                <div class="relative">
+                  <input
+                    type="text"
+                    class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input border-green-500 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                    value="Valid input"
+                  />
+                  <div
+                    class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                  >
+                    <i class="fas fa-check-circle text-green-500"></i>
+                  </div>
+                </div>
+                <p class="mt-1 text-sm text-green-600">This value is valid</p>
+              </div>
+
+              <!-- Error State -->
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5"
+                >
+                  Error Input
+                </label>
+                <div class="relative">
+                  <input
+                    type="text"
+                    class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input border-red-500 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+                    value="Invalid input"
+                  />
+                  <div
+                    class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                  >
+                    <i class="fas fa-exclamation-circle text-red-500"></i>
+                  </div>
+                </div>
+                <p class="mt-1 text-sm text-red-600">This value is invalid</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Sizes -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Input Sizes</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Different input field sizes
+              </p>
+            </div>
+            <div class="p-6 space-y-4">
+              <!-- Small Input -->
+              <input
+                type="text"
+                class="block w-full px-3 py-1.5 text-sm dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                placeholder="Small input"
+              />
+
+              <!-- Default Input -->
+              <input
+                type="text"
+                class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                placeholder="Default input"
+              />
+
+              <!-- Large Input -->
+              <input
+                type="text"
+                class="block w-full px-4 py-3 text-lg dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                placeholder="Large input"
+              />
+            </div>
+          </div>
+
+          <!-- Search Forms -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Search Forms</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Different search input variations
+              </p>
+            </div>
+            <div class="p-6 space-y-6">
+              <!-- Basic Search -->
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="Basic search..."
+                  class="w-full pl-10 pr-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-blue-500"
+                />
+                <i
+                  class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                ></i>
+              </div>
+
+              <!-- Search with Button -->
+              <div class="flex gap-2">
+                <div class="relative flex-1">
+                  <input
+                    type="text"
+                    placeholder="Search with button..."
+                    class="w-full pl-10 pr-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  />
+                  <i
+                    class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  ></i>
+                </div>
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Search
+                </button>
+              </div>
+
+              <!-- Advanced Search -->
+              <div class="flex flex-wrap gap-3">
+                <div class="relative flex-1 min-w-[200px]">
+                  <input
+                    type="text"
+                    placeholder="Keywords..."
+                    class="w-full pl-10 pr-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  />
+                  <i
+                    class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  ></i>
+                </div>
+                <select
+                  class="min-w-[150px] px-3 py-2.5 rounded-lg text-sm dark:bg-dark-input bg-gray-100 border-0 dark:text-gray-300 text-gray-900 focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">All Categories</option>
+                  <option value="1">Category 1</option>
+                  <option value="2">Category 2</option>
+                </select>
+                <button
+                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inline Form -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">Inline Form</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Form with inline elements
+              </p>
+            </div>
+            <div class="p-6">
+              <form class="flex flex-wrap items-end gap-4">
+                <div class="flex-1 min-w-[200px]">
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+                <div class="flex-1 min-w-[200px]">
+                  <label
+                    class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+                <button
+                  class="px-4 py-2.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- File Upload Forms -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">File Upload</h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Different file upload variations
+              </p>
+            </div>
+            <div class="p-6 space-y-6">
+              <!-- Basic File Upload -->
+              <div>
+                <label
+                  class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >Basic Upload</label
+                >
+                <input
+                  type="file"
+                  class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 dark:file:bg-blue-500/10 dark:file:text-blue-400"
+                />
+              </div>
+
+              <!-- Drag & Drop Zone -->
+              <div>
+                <label
+                  class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                  >Drag & Drop</label
+                >
+                <div
+                  class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed rounded-lg dark:border-gray-600 border-gray-300"
+                >
+                  <div class="space-y-1 text-center">
+                    <i
+                      class="fas fa-cloud-upload-alt text-4xl text-gray-400"
+                    ></i>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">
+                      <label
+                        for="file-upload"
+                        class="relative cursor-pointer rounded-md font-medium text-blue-500 hover:text-blue-400 focus-within:outline-none"
+                      >
+                        <span>Upload a file</span>
+                        <input
+                          id="file-upload"
+                          name="file-upload"
+                          type="file"
+                          class="sr-only"
+                        />
+                      </label>
+                      <p class="pl-1">or drag and drop</p>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      PNG, JPG, GIF up to 10MB
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Multi-Column Form -->
+          <div
+            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+          >
+            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+              <h2 class="text-lg font-medium dark:text-white">
+                Multi-Column Form
+              </h2>
+              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
+                Form with multiple columns layout
+              </p>
+            </div>
+            <div class="p-6">
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <!-- First Name -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <!-- Last Name -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <!-- City -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >City</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <!-- State -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >State</label
+                    >
+                    <select
+                      class="w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    >
+                      <option value="">Select State</option>
+                      <option value="CA">California</option>
+                      <option value="TX">Texas</option>
+                      <option value="NY">New York</option>
+                    </select>
+                  </div>
+                  <!-- ZIP -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >ZIP Code</label
+                    >
+                    <input
+                      type="text"
+                      class="w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="flex items-center justify-end gap-4 pt-4">
+                  <button
+                    type="button"
+                    class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

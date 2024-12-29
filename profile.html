@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-  <!-- Copy head section from table.html -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buttons - Samples</title>
+    <title>Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,11 +30,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="dark:bg-dark-bg bg-light-bg transition-colors">
     <div class="flex min-h-screen">
-      <!-- Copy sidebar from table.html but update active state for Buttons -->
+      <!-- Sidebar -->
       <aside class="w-20 lg:w-72 h-screen fixed transition-all">
         <div
           class="h-full dark:bg-dark-surface bg-white border-r dark:border-gray-800/50 border-gray-100 flex flex-col"
@@ -59,7 +58,7 @@
             </div>
           </div>
 
-          <!-- Navigation -->
+          <!-- Navigation Groups -->
           <div
             class="flex-1 px-4 py-6 space-y-6 overflow-y-auto custom-scrollbar"
           >
@@ -79,8 +78,8 @@
                     class="fas fa-home group-hover:text-blue-500 transition-colors"
                   ></i>
                   <span
-                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
-                    >Overview</span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors font-medium"
+                    >Dashboard</span
                   >
                 </a>
                 <a
@@ -118,9 +117,8 @@
                     >Projects</span
                   >
                 </a>
-
                 <a
-                  href="../tasks.html"
+                  href="tasks.html"
                   class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
                 >
                   <i
@@ -131,7 +129,6 @@
                     >Tasks</span
                   >
                 </a>
-
                 <a
                   href="#"
                   class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
@@ -156,11 +153,11 @@
               </p>
               <nav class="space-y-1">
                 <a
-                  href="table.html"
+                  href="samples/table.html"
                   class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
                 >
                   <i
-                    class="fas fa-square group-hover:text-blue-500 transition-colors"
+                    class="fas fa-table group-hover:text-blue-500 transition-colors"
                   ></i>
                   <span
                     class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
@@ -168,17 +165,19 @@
                   >
                 </a>
                 <a
-                  href="buttons.html"
-                  class="flex items-center h-11 px-4 rounded-lg bg-blue-50 dark:bg-blue-500/10"
+                  href="samples/buttons.html"
+                  class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
                 >
-                  <i class="fas fa-table text-blue-500"></i>
-                  <span class="hidden lg:block ml-3 text-blue-500 font-medium"
+                  <i
+                    class="fas fa-square group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <span
+                    class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
                     >Buttons</span
                   >
                 </a>
-
                 <a
-                  href="badges.html"
+                  href="samples/badges.html"
                   class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
                 >
                   <i
@@ -201,15 +200,15 @@
               </p>
               <nav class="space-y-1">
                 <a
-                  href="#"
+                  href="profile.html"
                   class="flex items-center h-11 px-4 rounded-lg dark:text-gray-400 text-gray-600 dark:hover:bg-dark-input hover:bg-gray-50 transition-colors group"
                 >
                   <i
-                    class="fas fa-cog group-hover:text-blue-500 transition-colors"
+                    class="fas fa-user group-hover:text-blue-500 transition-colors"
                   ></i>
                   <span
                     class="hidden lg:block ml-3 group-hover:text-blue-500 transition-colors"
-                    >Preferences</span
+                    >Profile</span
                   >
                 </a>
                 <a
@@ -227,6 +226,7 @@
               </nav>
             </div>
 
+            <!-- Add some extra space at the bottom for better scrolling -->
             <div class="h-6"></div>
           </div>
         </div>
@@ -234,7 +234,6 @@
 
       <!-- Main Content -->
       <main class="ml-20 lg:ml-72 flex-1">
-        <!-- Copy header from table.html but update breadcrumb to "Buttons" -->
         <header
           class="h-16 flex items-center justify-between px-6 border-b dark:border-gray-800/50 border-gray-100 bg-white/80 dark:bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-10"
         >
@@ -251,10 +250,10 @@
             <div
               class="hidden sm:flex items-center text-sm dark:text-gray-400 text-gray-600"
             >
-              <a href="#" class="hover:text-blue-500">UI Samples</a>
+              <a href="#" class="hover:text-blue-500">Settings</a>
               <i class="fas fa-chevron-right text-xs mx-2 text-gray-400"></i>
               <span class="text-gray-900 dark:text-white font-medium"
-                >Buttons</span
+                >Profile</span
               >
             </div>
           </div>
@@ -470,343 +469,285 @@
             </div>
           </div>
         </header>
-
-        <!-- Content -->
+        <!-- Profile Content -->
         <div class="p-6 space-y-6">
-          <!-- Primary Buttons -->
+          <!-- Profile Header -->
           <div
             class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
           >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">
-                Primary Buttons
-              </h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Main call-to-action buttons
-              </p>
-            </div>
             <div class="p-6">
-              <div class="flex flex-wrap gap-4">
-                <button
-                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  Default
-                </button>
-                <button
-                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700 transition-colors"
-                >
-                  Active State
-                </button>
-                <button
-                  class="px-4 py-2 bg-blue-500 text-white rounded-lg opacity-50 cursor-not-allowed"
-                  disabled
-                >
-                  Disabled
-                </button>
-                <button
-                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-dark-bg transition-colors"
-                >
-                  With Focus Ring
-                </button>
+              <div class="flex flex-col sm:flex-row items-center gap-6">
+                <!-- Profile Image -->
+                <div class="relative group">
+                  <img
+                    src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff&size=128"
+                    alt="Profile"
+                    class="w-32 h-32 rounded-xl"
+                  />
+                  <button
+                    class="absolute inset-0 flex items-center justify-center bg-black/50 text-white opacity-0 group-hover:opacity-100 rounded-xl transition-opacity"
+                  >
+                    <i class="fas fa-camera"></i>
+                  </button>
+                </div>
+
+                <!-- Profile Info -->
+                <div class="flex-1 text-center sm:text-left">
+                  <h1 class="text-2xl font-semibold dark:text-white">
+                    John Doe
+                  </h1>
+                  <p class="text-sm dark:text-gray-400 text-gray-600 mt-1">
+                    Administrator
+                  </p>
+                  <div
+                    class="flex flex-wrap items-center justify-center sm:justify-start gap-3 mt-4"
+                  >
+                    <span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-sm bg-blue-100 text-blue-800 dark:bg-blue-500/10 dark:text-blue-400"
+                    >
+                      <i class="fas fa-envelope text-xs"></i>
+                      john@example.com
+                    </span>
+                    <span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-sm bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-400"
+                    >
+                      <i class="fas fa-circle text-[8px]"></i>
+                      Online
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex gap-3">
+                  <button
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  >
+                    Edit Profile
+                  </button>
+                  <button
+                    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-input text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  >
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Colored Buttons -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">
-                Colored Buttons
-              </h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Buttons with different color variations
-              </p>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-4">
-                <button
-                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  Primary
-                </button>
-                <button
-                  class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
-                >
-                  Success
-                </button>
-                <button
-                  class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
-                >
-                  Warning
-                </button>
-                <button
-                  class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-                >
-                  Danger
-                </button>
-                <button
-                  class="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
-                >
-                  Info
-                </button>
-                <button
-                  class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                >
-                  Dark
-                </button>
+          <!-- Profile Details -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Personal Information -->
+            <div
+              class="lg:col-span-2 bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+            >
+              <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
+                <h2 class="text-lg font-medium dark:text-white">
+                  Personal Information
+                </h2>
+              </div>
+              <div class="p-6">
+                <form class="space-y-6">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- First Name -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        value="John"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+
+                    <!-- Last Name -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        value="Doe"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        value="john@example.com"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        Phone
+                      </label>
+                      <input
+                        type="tel"
+                        value="+1 (555) 123-4567"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Bio -->
+                  <div>
+                    <label
+                      class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                    >
+                      Bio
+                    </label>
+                    <textarea
+                      rows="4"
+                      class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    >
+Administrator with 5+ years of experience in system management and team leadership.</textarea
+                    >
+                  </div>
+
+                  <!-- Save Button -->
+                  <div class="flex justify-end">
+                    <button
+                      type="submit"
+                      class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    >
+                      Save Changes
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>
 
-          <!-- Outlined Buttons -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">
-                Outlined Buttons
-              </h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Buttons with border and transparent background
-              </p>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-4">
-                <button
-                  class="px-4 py-2 border-2 border-blue-500 text-blue-500 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 transition-colors"
+            <!-- Account Settings -->
+            <div class="space-y-6">
+              <!-- Password Change -->
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+              >
+                <div
+                  class="p-6 border-b dark:border-gray-800/50 border-gray-100"
                 >
-                  Primary
-                </button>
-                <button
-                  class="px-4 py-2 border-2 border-green-500 text-green-500 dark:text-green-400 rounded-lg hover:bg-green-50 dark:hover:bg-green-500/10 transition-colors"
-                >
-                  Success
-                </button>
-                <button
-                  class="px-4 py-2 border-2 border-yellow-500 text-yellow-500 dark:text-yellow-400 rounded-lg hover:bg-yellow-50 dark:hover:bg-yellow-500/10 transition-colors"
-                >
-                  Warning
-                </button>
-                <button
-                  class="px-4 py-2 border-2 border-red-500 text-red-500 dark:text-red-400 rounded-lg hover:bg-red-50 dark:hover:bg-red-500/10 transition-colors"
-                >
-                  Danger
-                </button>
-                <button
-                  class="px-4 py-2 border-2 border-gray-500 text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600/10 transition-colors"
-                >
-                  Dark
-                </button>
-              </div>
-            </div>
-          </div>
+                  <h2 class="text-lg font-medium dark:text-white">
+                    Change Password
+                  </h2>
+                </div>
+                <div class="p-6">
+                  <form class="space-y-4">
+                    <!-- Current Password -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        Current Password
+                      </label>
+                      <input
+                        type="password"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
 
-          <!-- Flat Buttons -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">Flat Buttons</h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Buttons without background or border
-              </p>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-4">
-                <button
-                  class="px-4 py-2 text-blue-500 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 rounded-lg transition-colors"
-                >
-                  Primary
-                </button>
-                <button
-                  class="px-4 py-2 text-green-500 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-500/10 rounded-lg transition-colors"
-                >
-                  Success
-                </button>
-                <button
-                  class="px-4 py-2 text-yellow-500 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-500/10 rounded-lg transition-colors"
-                >
-                  Warning
-                </button>
-                <button
-                  class="px-4 py-2 text-red-500 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors"
-                >
-                  Danger
-                </button>
-                <button
-                  class="px-4 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600/10 rounded-lg transition-colors"
-                >
-                  Dark
-                </button>
+                    <!-- New Password -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        New Password
+                      </label>
+                      <input
+                        type="password"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div>
+                      <label
+                        class="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1.5"
+                      >
+                        Confirm Password
+                      </label>
+                      <input
+                        type="password"
+                        class="block w-full px-4 py-2.5 dark:text-gray-200 text-gray-900 dark:bg-dark-input bg-light-input dark:border-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      />
+                    </div>
+
+                    <!-- Update Button -->
+                    <button
+                      type="submit"
+                      class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    >
+                      Update Password
+                    </button>
+                  </form>
+                </div>
               </div>
 
-              <!-- Flat Buttons with Icons -->
-              <div class="flex flex-wrap gap-4 mt-4">
-                <button
-                  class="inline-flex items-center px-4 py-2 text-blue-500 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 rounded-lg transition-colors"
+              <!-- Notifications Settings -->
+              <div
+                class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
+              >
+                <div
+                  class="p-6 border-b dark:border-gray-800/50 border-gray-100"
                 >
-                  <i class="fas fa-plus mr-2"></i>
-                  Add New
-                </button>
-                <button
-                  class="inline-flex items-center px-4 py-2 text-green-500 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-500/10 rounded-lg transition-colors"
-                >
-                  <i class="fas fa-check mr-2"></i>
-                  Approve
-                </button>
-                <button
-                  class="inline-flex items-center px-4 py-2 text-red-500 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors"
-                >
-                  <i class="fas fa-trash mr-2"></i>
-                  Delete
-                </button>
-              </div>
-            </div>
-          </div>
+                  <h2 class="text-lg font-medium dark:text-white">
+                    Notifications
+                  </h2>
+                </div>
+                <div class="p-6 space-y-4">
+                  <!-- Email Notifications -->
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="text-sm font-medium dark:text-white">
+                        Email Notifications
+                      </p>
+                      <p class="text-sm dark:text-gray-400 text-gray-600">
+                        Receive email about your account activity
+                      </p>
+                    </div>
+                    <button
+                      class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-blue-500"
+                    >
+                      <span
+                        class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                      ></span>
+                    </button>
+                  </div>
 
-          <!-- Buttons with Icons -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">
-                Buttons with Icons
-              </h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Buttons with leading or trailing icons
-              </p>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-4">
-                <!-- Leading Icons -->
-                <button
-                  class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  <i class="fas fa-plus mr-2"></i>
-                  Add New
-                </button>
-                <button
-                  class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
-                >
-                  <i class="fas fa-download mr-2"></i>
-                  Download
-                </button>
-
-                <!-- Trailing Icons -->
-                <button
-                  class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  Next
-                  <i class="fas fa-arrow-right ml-2"></i>
-                </button>
-                <button
-                  class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
-                >
-                  Share
-                  <i class="fas fa-share ml-2"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Icon Only Buttons -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">
-                Icon Only Buttons
-              </h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Compact buttons with only icons
-              </p>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-4">
-                <button
-                  class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-input text-gray-600 dark:text-gray-400 transition-colors"
-                >
-                  <i class="fas fa-search"></i>
-                </button>
-                <button
-                  class="p-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-500/10 text-blue-500 transition-colors"
-                >
-                  <i class="fas fa-edit"></i>
-                </button>
-                <button
-                  class="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-500/10 text-red-500 transition-colors"
-                >
-                  <i class="fas fa-trash"></i>
-                </button>
-                <button
-                  class="p-2 rounded-lg hover:bg-green-50 dark:hover:bg-green-500/10 text-green-500 transition-colors"
-                >
-                  <i class="fas fa-check"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Button Sizes -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">Button Sizes</h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Different button size variations
-              </p>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap items-center gap-4">
-                <button
-                  class="px-3 py-1.5 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  Small
-                </button>
-                <button
-                  class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  Medium
-                </button>
-                <button
-                  class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  Large
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Button Groups -->
-          <div
-            class="bg-white dark:bg-dark-surface rounded-xl border border-gray-100 dark:border-gray-800/50"
-          >
-            <div class="p-6 border-b dark:border-gray-800/50 border-gray-100">
-              <h2 class="text-lg font-medium dark:text-white">Button Groups</h2>
-              <p class="mt-1 text-sm dark:text-gray-400 text-gray-600">
-                Connected button groups
-              </p>
-            </div>
-            <div class="p-6">
-              <div class="inline-flex rounded-lg overflow-hidden">
-                <button
-                  class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors border-r dark:border-gray-700 border-gray-200"
-                >
-                  Left
-                </button>
-                <button
-                  class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors border-r dark:border-gray-700 border-gray-200"
-                >
-                  Middle
-                </button>
-                <button
-                  class="px-4 py-2 bg-gray-100 dark:bg-dark-input text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-input/80 transition-colors"
-                >
-                  Right
-                </button>
+                  <!-- Push Notifications -->
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="text-sm font-medium dark:text-white">
+                        Push Notifications
+                      </p>
+                      <p class="text-sm dark:text-gray-400 text-gray-600">
+                        Receive notifications in your browser
+                      </p>
+                    </div>
+                    <button
+                      class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-gray-200 dark:bg-gray-700"
+                    >
+                      <span
+                        class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -814,6 +755,6 @@
       </main>
     </div>
 
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
